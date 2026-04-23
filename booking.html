@@ -1,0 +1,1782 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>Booking | Kodam Convention Warangal</title>
+    <meta name="description" content="Plan your perfect event at Kodam Convention. Grand column-less halls for weddings, corporate events, and celebrations. Book your date today!">
+    <link rel="icon" type="image/png" href="./images/Kodam-gold-Logo.png">
+    <link rel="shortcut icon" href="./images/Kodam-gold-Logo.png">
+    <link rel="apple-touch-icon" href="./images/Kodam-gold-Logo.png">
+    <link rel="icon" href="./images/Kodam-gold-Logo.png?v=1">
+    
+    
+    <link href="./css/datepicker-CKKEloXK.css" rel="stylesheet">
+    <link href="./css/swiper-C8OCKB2a.css" rel="stylesheet">
+    <link href="./css/nice-select2-HeejrRTK.css" rel="stylesheet">
+    <link rel="preload" as="style" href="./css/index-BOLahH51.css"><link rel="stylesheet" href="./css/index-BOLahH51.css">    
+    <link media="screen and (min-width: 769px)" href="./css/index-l-Bjmvkr3q.css" rel="stylesheet">
+    <link media="screen and (max-width: 768px)" href="./css/index-m-Ck8WFpPL.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #0f4f3a;
+            --accent-gold: #c9a050;
+            --text-dark: #1a1a1a;
+            --bg-luxury: #ffffff;
+            --bg-neutral: #dfe0d1;
+        }
+
+
+        html, body {
+            overflow-x: hidden;
+            overflow-y: auto !important;
+            height: auto !important;
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            background: var(--bg-neutral);
+        }
+
+        /* Fix Double Scroll Structure */
+        .root {
+            overflow: visible !important;
+            height: auto !important;
+        }
+
+        .booking-page {
+            overflow: visible !important;
+            height: auto !important;
+            min-height: 100vh;
+        }
+
+        /* SECTION 1 — BRAND LEVEL HERO & CENTERED PANEL */
+        .hero-booking {
+            min-height: 95vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: url('images/weddings.jpg-2400x_-quality(75)-webp(95)-o(jpg).webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .hero-booking::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.45), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding-top: clamp(80px, 12vh, 140px);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .hero-title {
+            font-size: 62px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* SECTION 2 — MAKEMYTRIP STYLE CENTERED PANEL */
+        .booking-card-wrapper {
+            width: 100%;
+            max-width: 1250px;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+            box-sizing: border-box;
+            transform: translateY(0);
+            margin: 0 auto;
+        }
+
+        .booking-card-main {
+            background: #ffffff;
+            padding: 35px 40px 45px 40px;
+            border-radius: 20px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            position: relative;
+        }
+
+        /* Tab Bar Row */
+        .booking-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .booking-tab {
+            padding: 10px 24px;
+            border-radius: 30px;
+            background: #f5f5f5;
+            color: #666;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border: 1px solid transparent;
+        }
+
+        .booking-tab.active {
+            background: var(--primary-green);
+            color: #fff;
+            box-shadow: 0 6px 15px rgba(15,79,58,0.2);
+        }
+
+        .booking-tab:hover:not(.active) {
+            background: #ededed;
+            color: #1a1a1a;
+        }
+
+        /* SECTION 2 — ALIGNED WITH HOMEPAGE + LUXURY CONTAINER */
+        .booking-card-wrapper {
+            width: 100%;
+            max-width: 1250px;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        /* Container simplification to let glass card float */
+        .booking-card-main {
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            text-align: left;
+        }
+
+        .booking-page-form {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 40px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 25px 60px -15px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            position: relative;
+            transform: translateY(-20px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Top Highlight (Premium Detail) */
+        .booking-page-form::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0.05)
+            );
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Subtle Hover Lift */
+        .booking-page-form:hover {
+            transform: translateY(-26px);
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 
+                0 35px 80px -20px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+        }
+
+        .booking-fields-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        /* Scoped Homepage Field Styles for Booking Page */
+        .booking-page-form .cb-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .booking-page-form label {
+            font-size: 13px;
+            font-weight: 800;
+            color: #004535;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.85;
+            display: block;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        /* ── Smart Date Input Styles ── */
+        .cb-date-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .cb-date-display-input {
+            text-align: left;
+            padding-left: 18px !important;
+            padding-right: 42px !important;
+            height: 56px;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 69, 53, 0.15);
+            padding: 0 18px;
+            background: #ffffff;
+            color: #1a1a1a;
+            font-size: 17px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .cb-calendar-icon-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        .cb-calendar-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #004535;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .cb-calendar-icon-btn:hover svg {
+            opacity: 1;
+        }
+
+        .booking-page-form input[type="date"], 
+        .booking-page-form .cb-date-display-input,
+        .booking-page-form .cb-dropdown-trigger {
+            height: 56px;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 69, 53, 0.15);
+            padding: 0 18px;
+            background: #ffffff;
+            color: #1a1a1a;
+            font-size: 17px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .booking-page-form .cb-date-display-input.cb-date-error {
+            border-color: #d32f2f !important;
+            box-shadow: 0 0 0 3px rgba(211,47,47,0.1) !important;
+        }
+        .cb-error-msg {
+            display: none;
+            color: #d32f2f;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .cb-error-msg.visible {
+            display: block;
+        }
+
+        .booking-page-form input[type="date"]:focus, 
+        .booking-page-form .cb-dropdown-trigger:focus,
+        .booking-page-form .cb-field.open .cb-dropdown-trigger {
+            outline: none;
+            border-color: #004535;
+            box-shadow: 0 0 0 4px rgba(0, 69, 53, 0.08);
+        }
+
+        /* Dropdown UI */
+        .booking-page-form .cb-dropdown-list {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding: 8px;
+            border: 1px solid rgba(0, 69, 53, 0.1);
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .booking-page-form .cb-field.open .cb-dropdown-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            display: block;
+        }
+        .booking-page-form .cb-option {
+            padding: 14px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 800;
+            transition: background 0.2s;
+            color: #1a1a1a;
+        }
+        .booking-page-form .cb-option:hover { background: #f0f7f5; color: #004535; }
+
+        .booking-page-form .cb-arrow {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #888;
+            transition: transform 0.2s ease;
+            margin-left: auto;
+        }
+        .booking-page-form .cb-field.open .cb-arrow { transform: rotate(180deg); }
+
+        /* Button Alignment Fix */
+        .check-btn-wrap {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .check-btn {
+            height: 60px;
+            padding: 0 60px;
+            border-radius: 60px;
+            background: linear-gradient(135deg, #0d5c46, #0f7a5a);
+            color: #fff;
+            font-weight: 800;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            transition: 0.31s;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 12px 30px rgba(13, 92, 70, 0.3);
+        }
+
+        .check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(15,79,58,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero-booking {
+                padding-top: 100px !important;
+            }
+            .hero-title {
+                font-size: 36px !important;
+                line-height: 1.2 !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .booking-fields-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .booking-fields-grid {
+                grid-template-columns: 1fr;
+            }
+            .booking-card-main { padding: 30px 20px; }
+            .check-btn { width: 100%; border-radius: 12px; }
+        }
+
+        /* SECTION 3 — EXPLORE EVENT EXPERIENCES */
+        .experience-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .experience-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .exp-card {
+            height: 320px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .exp-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .exp-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+            z-index: 1;
+            transition: 0.3s;
+        }
+
+        .exp-content {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            z-index: 2;
+            color: #ffffff;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .exp-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .exp-card:hover img { transform: scale(1.1); }
+        .exp-card:hover .exp-overlay { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
+        .exp-card:hover .exp-content { transform: translateY(-5px); }
+
+        /* LUXURY EXTRA SECTIONS — REFINED ALIGNMENT */
+        .booking-extra {
+          padding: 80px 20px;
+          background: #dfe0d1; /* Premium background */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow: hidden;
+        }
+
+        .section-wrapper-extra {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .extra-heading-group {
+          margin-bottom: 60px;
+          text-align: center;
+        }
+
+        .extra-title {
+          font-size: 42px;
+          font-weight: 700;
+          color: var(--primary-green);
+          margin-bottom: 15px;
+          font-family: 'Playfair Display', serif;
+          letter-spacing: 0.5px;
+        }
+
+        .extra-subtitle {
+          font-size: 16px;
+          color: #666;
+          font-weight: 500;
+          display: block;
+        }
+
+        /* Feature Cards (Why Choose) */
+        .feature-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          margin-bottom: 80px;
+          width: 100%;
+        }
+
+        .feature-card {
+          background: #ffffff;
+          padding: 50px 35px;
+          border-radius: 24px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+          transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+          text-align: center;
+          border: 1px solid rgba(0,0,0,0.02);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .feature-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+          border-color: rgba(15,79,58,0.1);
+        }
+
+        .feature-icon {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 25px;
+          background: #f0f7f4;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-green);
+        }
+
+        .feature-icon svg { width: 32px; height: 32px; }
+
+        .feature-card h3 {
+          font-size: 22px;
+          font-weight: 700;
+          color: var(--primary-green);
+          margin-bottom: 18px;
+          font-family: 'Playfair Display', serif;
+        }
+
+        .feature-card p {
+          font-size: 15px;
+          color: #666;
+          line-height: 1.7;
+          margin: 0;
+        }
+
+        /* Stats Bar — REFINED */
+        .stats-bar {
+          background: var(--primary-green);
+          color: #ffffff;
+          padding: 30px 60px;
+          border-radius: 100px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          max-width: 1000px;
+          margin-bottom: 100px;
+          box-shadow: 0 20px 50px rgba(15,79,58,0.25);
+          box-sizing: border-box;
+        }
+
+        .stat-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          font-weight: 700;
+          font-size: 16px;
+          color: #fff;
+          white-space: nowrap;
+          transition: all 0.2s ease;
+        }
+
+        .stat-item:hover .stat-icon {
+            transform: scale(1.08);
+        }
+
+        .stat-icon { 
+            width: 18px; 
+            height: 18px; 
+            opacity: 0.95; 
+            flex-shrink: 0; 
+            stroke-width: 1.5; 
+            transition: all 0.2s ease; 
+        }
+
+        /* Testimonials Section Layout Optimization (FROM HOME PAGE) */
+        .feedbacks_section { 
+            padding-top: 100px !important; 
+            padding-bottom: 100px !important;
+            background: #dfe0d1 !important;
+            position: relative;
+            width: 100%;
+        }
+        
+        .feedbacks_section .section_title {
+            margin-bottom: 60px !important;
+            font-size: 3.5rem !important;
+            font-weight: 800 !important;
+            text-align: center;
+        }
+        
+        .feedbacks_slider .feedback_text {
+            margin: 40px auto 0 !important; /* Elegant gap from image */
+            min-height: 0 !important;
+            padding-bottom: 0 !important;
+            max-width: 900px !important; /* More readable line length */
+        }
+        
+        .feedbacks_slider .feedback_text p {
+            font-size: 1.35rem !important;
+            line-height: 1.7 !important;
+            margin: 0 !important;
+            color: #444 !important;
+            text-align: center;
+        }
+
+        .feedbacks_slider .feedback_author {
+            margin-top: 30px !important; /* Breathe between quote and name */
+            padding-top: 0 !important;
+            font-size: 2.2rem !important;
+            font-weight: 800 !important;
+            color: #004535 !important;
+            font-family: 'Playfair Display', serif !important;
+            text-align: center;
+        }
+
+        .feedbacks_slider .image_block img {
+            width: 180px !important;
+            height: 180px !important;
+            border-radius: 50% !important;
+            border: 6px solid #004535 !important;
+            object-fit: cover !important;
+            margin: 0 auto !important;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        /* Unified Slider Navigation (Arrows + Track) */
+        .slider_nav_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .feedbacks_slider .swiper-prev,
+        .feedbacks_slider .swiper-next {
+            position: static !important; /* Remove absolute positioning */
+            margin: 0 !important;
+            background: transparent !important;
+            border: none;
+            cursor: pointer;
+            color: #262626 !important;
+            transition: transform 0.3s ease, color 0.3s ease;
+            width: auto !important;
+            height: auto !important;
+        }
+
+        .feedbacks_slider .swiper-prev:hover { transform: translateX(-5px); }
+        .feedbacks_slider .swiper-next:hover { transform: translateX(5px); }
+
+        .feedbacks_slider .swiper-prev:before,
+        .feedbacks_slider .swiper-next:before {
+            font-size: 2.5rem !important;
+        }
+
+        .feedbacks_slider .nav_track {
+            display: block !important;
+            margin: 0 !important; /* Handled by flex gap */
+            width: 250px !important; 
+            background: rgba(0, 69, 53, 0.1) !important;
+            height: 2px !important; /* Thin, elegant track */
+            border-radius: 1px !important;
+            position: relative;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        /* Swiper Scrollbar Handle (Traveling Line) */
+        .feedbacks_slider .nav_track .swiper-scrollbar-drag {
+            background: #004535 !important;
+            height: 400% !important; /* Slightly taller than track */
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            border-radius: 4px !important;
+            cursor: grab;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            .feedbacks_section { padding: 80px 0 !important; }
+            .feedbacks_section .section_title { font-size: 2.2rem !important; margin-bottom: 40px !important; }
+            .slider_nav_wrap { gap: 30px; margin-top: 50px; }
+            .feedbacks_slider .nav_track { width: 120px !important; }
+            .feedbacks_slider .feedback_author { font-size: 1.6rem !important; }
+            .feedbacks_slider .feedback_text p { font-size: 1.15rem !important; }
+            .feedbacks_slider .image_block img { width: 140px !important; height: 140px !important; }
+        }
+
+        /* Responsive Refinements */
+        @media (max-width: 1024px) {
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-bar { border-radius: 30px; flex-wrap: wrap; gap: 25px; padding: 40px; justify-content: center; }
+            .stat-item { flex: 1 1 40%; justify-content: flex-start; }
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .stats-bar { 
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px 12px;
+                padding: 20px 16px !important;
+                border-radius: 20px !important;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 100px 0;
+                align-items: center;
+                justify-items: center;
+                box-sizing: border-box;
+            }
+            .stat-item { 
+                display: flex !important;
+                justify-content: center !important; 
+                align-items: center !important;
+                width: 100%;
+                min-height: 36px;
+                font-size: 13px !important; 
+                font-weight: 500 !important;
+                line-height: 1.3;
+                opacity: 0.95;
+                gap: 8px;
+                text-align: center;
+                transition: transform 0.2s ease;
+            }
+            .stat-item:active {
+                transform: scale(0.96);
+            }
+            .stat-item .stat-icon {
+                width: 16px !important;
+                height: 16px !important;
+                flex-shrink: 0;
+            }
+            .booking-extra { padding: 60px 20px; }
+        }
+        /* ── Popup Modal Styles ── */
+        .cb-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; backdrop-filter: blur(4px); padding: 20px; }
+        .cb-modal-overlay.active { opacity: 1; visibility: visible; }
+        .cb-modal { background: #fff; width: 100%; max-width: 500px; border-radius: 12px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: translateY(20px); transition: all 0.3s ease; position: relative; }
+        .cb-modal-overlay.active .cb-modal { transform: translateY(0); }
+        .cb-modal-close { position: absolute; top: 15px; right: 15px; width: 30px; height: 30px; border-radius: 50%; background: #f0f0f0; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #555; transition: background 0.2s; padding: 0; }
+        .cb-modal-close:hover { background: #e0e0e0; color: #000; }
+        .cb-modal-title { font-size: 1.6rem; font-weight: 800; color: #1a1a1a; margin-bottom: 20px; text-align: center; }
+        .cb-modal-readonly { background: #f8f9fa; border-radius: 8px; padding: 15px; margin-bottom: 20px; border: 1px solid #e9ecef; }
+        .cb-val-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.95rem; }
+        .cb-val-row:last-child { margin-bottom: 0; }
+        .cb-val-label { font-weight: 700; color: #555; }
+        .cb-val-data { font-weight: 800; color: #2e7d32; text-align: right; }
+        .cb-modal-input-group { margin-bottom: 16px; text-align: left; }
+        .cb-modal-input-group label { display: block; font-weight: 700; color: #333; margin-bottom: 6px; font-size: 0.95rem; }
+        .cb-modal-input-group input, .cb-modal-input-group textarea { width: 100%; border: 1.5px solid #d4d4d4; border-radius: 8px; padding: 12px 14px; font-size: 1rem; font-family: inherit; transition: border 0.2s; box-sizing: border-box; }
+        .cb-modal-input-group input:focus, .cb-modal-input-group textarea:focus { outline: none; border-color: #2e7d32; }
+        .cb-modal-input-group textarea { resize: vertical; min-height: 80px; }
+        .cb-continue-btn { width: 100%; background: #2e7d32; color: #fff; border: none; padding: 14px; font-size: 1.1rem; font-weight: 700; border-radius: 8px; cursor: pointer; transition: background 0.25s; margin-top: 5px; }
+        .cb-continue-btn:hover { background: #1b5e20; }
+        .cb-modal-error { color: #d32f2f; font-size: 0.85rem; font-weight: 700; margin-top: 4px; display: none; }
+        .cb-modal-helper { font-size: 0.9rem; color: #7a7a7a; margin-top: 16px; margin-bottom: 0px; line-height: 1.4; text-align: center; }
+        </style>
+        
+
+    <style id="header-logo-styles">
+        .header-logo {
+            width: 171px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            max-width: 100%;
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .header-logo {
+                width: 110px;
+            }
+        }
+        .main_logo {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+    <style id="menu-alignment-styles">
+        .menu-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            min-height: 60vh;
+        }
+
+        .menu-left {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            align-items: flex-start;
+        }
+
+        .menu-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .menu-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .menu-left,
+            .menu-right {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <style id="menu-left-fixes">
+        .menu-left {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: flex-start;
+            max-width: 420px;
+        }
+
+        .menu-left li {
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-left .text {
+            white-space: nowrap;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .menu-left .arrow {
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+    </style>
+
+    <style id="menu-spacing-fixes">
+        .menu-container {
+            max-width: 1200px !important;
+            margin: 0 auto;
+            padding: 0 40px !important;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .menu-left {
+            align-items: flex-start;
+            margin-left: 40px !important;
+        }
+    </style>
+
+    <link rel="icon" type="image/png" href="./images/Kodam-gold-Logo.png">
+    <link rel="shortcut icon" href="./images/Kodam-gold-Logo.png">
+    <link rel="apple-touch-icon" href="./images/Kodam-gold-Logo.png">
+    <link href="./css/navigation-custom.css" rel="stylesheet">
+</head>
+
+
+
+
+
+<body class="body-en body-page b">
+    <div class="header">
+	<div class="header_inner">
+		<div class="main_logo">
+            <a href="index.html">
+										<img loading="lazy" src="./images/Kodam-gold-Logo.png" alt="Kodam Convention" title="Kodam Convention" class="header-logo">
+            </a>
+		</div>
+        <a href="tel:+918520025000" class="secondary_light icon_phone">+91 85200 25000</a>
+
+                    <div class="lg_block">
+    <a href="index.html" class="drop_btn home-btn">Home</a>
+</div>                
+		
+		<a href="booking.html" class="book_btn secondary_btn" aria-label="booking">Booking</a>
+		<button class="menu_btn secondary_light" aria-label="mobile menu">
+			Menu
+			<span><span></span></span>
+		</button>
+	</div>
+	<div class="menu_block">
+			
+		<div class="menu_image">
+			<picture>
+				<source media="(min-width:1441px)" width="1230" height="1080" srcset="./images/main_logo.png" data-srcset="https://www.oldijevan.am/storage/files/menu-bg.jpg-_x1080-quality(75)-webp(95)-o(jpg).webp?token=877046972409af99831f54e8ef16ba81 1x, https://www.oldijevan.am/storage/files/menu-bg.jpg-_x2160-quality(75)-webp(95)-o(jpg).webp?token=6d30e3fed45e0c6020ab785b98453dad 2x">
+				<source media="(min-width:1025px)" width="864" height="900" srcset="./images/main_logo.png" data-srcset="https://www.oldijevan.am/storage/files/menu-bg.jpg-_x900-quality(75)-webp(95)-o(jpg).webp?token=100a6e292235ee8478b0ac9344599a5e 1x, https://www.oldijevan.am/storage/files/menu-bg.jpg-_x1800-quality(75)-webp(95)-o(jpg).webp?token=edd1f84e152a71d428594ba339bb9785 2x">
+				<source media="(min-width:769px)" width="657" height="768" srcset="./images/main_logo.png" data-srcset="https://www.oldijevan.am/storage/files/menu-bg.jpg-_x768-quality(75)-webp(95)-o(jpg).webp?token=4db710aad9ce700a2c2e0af56b7123ab 1x, https://www.oldijevan.am/storage/files/menu-bg.jpg-_x1536-quality(75)-webp(95)-o(jpg).webp?token=7484086ab51b26affd39ed256dd9b8e7 2x">
+				<img loading="lazy" class="left_image" data-src="https://www.oldijevan.am/storage/files/menu-bg.jpg.webp" width="0" height="0" alt="" title=""> <!--size x2-->
+			</picture>
+		</div>
+				
+		
+		<div class="menu_inner">
+			<div class="btns_container"></div>
+			<div class="page_container">
+				<div class="menu_left">
+                    
+                    <div class="menu-container">
+                                                <div class="menu-left">
+                            <ul class="main_menu">
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="index.html" class="text">Home</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="booking.html" class="text">Plan Your Perfect Event</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="layouts/index.html" class="text">Explore Layouts</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                            
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="terms.html" class="text">Terms & Conditions</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="privacy.html" class="text">Privacy Policy</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+            				</div>
+				<div class="menu_right">
+					<div class="contact_block">
+						<div class="contact_title">WHERE WE ARE</div>
+						<div class="contact_info">
+							Hunter Road, Hanamkonda,<br>
+							Near Khamman Fly Over,<br>
+							Warangal - 506001, Telangana
+						</div>
+					</div>
+					<div class="contact_block">
+						<div class="contact_info">
+							<a href="tel:+918520025000">+91 85200 25000</a>
+							<br>
+                                                                                                                                                                             <a href="mailto:kodamconvention@gmail.com">kodamconvention@gmail.com</a>
+                                                                                                						</div>
+						<a href="tel:+918520025000" class="simple_btn icon_next" aria-label="Call +91 85200 25000">Contact Us</a>
+					</div>					
+					<ul class="socials_list">
+                                    <li>
+    <a class="icon_facebook" href="https://www.facebook.com/kodamconvention" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </li>                                    <li>
+    <a class="icon_instagram" href="https://www.instagram.com/kodamconvention/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>                                    <li>
+    <a class="icon_youtube" href="https://www.youtube.com/@kodamconvention5033" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </li>                            </ul>
+                                
+				</div>
+			</div>
+			
+		</div>
+		<span class="menu_decor">
+			<span class="decor_inner">
+									<img loading="lazy" src="./images/menu_bg.svg" alt="" title="" width="692" height="756">
+								
+			</span>
+		</span>
+	</div>
+</div>
+<main class="root booking-page">
+    <div class="other_sections">
+        <!-- SECTION 1 — BRAND LEVEL HERO & CENTERED PANEL -->
+        <section class="hero-booking" id="plan-event">
+            <div class="hero-content">
+                <h1 class="hero-title">Plan Your Grand Celebration</h1>
+                <p class="hero-subtitle">From intimate gatherings to grand weddings — create unforgettable moments at Kodam Convention</p>
+            </div>
+
+            <!-- SECTION 2 — ALIGNED WITH HOMEPAGE -->
+            <div class="booking-card-wrapper">
+                <div class="booking-card-main">
+                    <div class="booking-page-form">
+                        <div class="booking-fields-grid">
+                            <!-- 1. Event Date -->
+                            <div class="cb-field">
+                                <label>Event Date</label>
+                                <div class="cb-date-wrapper">
+                                    <input type="tel" id="cb-event-date-display" placeholder="DD/MM/YYYY" maxlength="10" inputmode="numeric" class="cb-date-display-input">
+                                    <input type="date" id="cb-event-date" name="cb_event_date" style="position:absolute; opacity:0; pointer-events:none; width:0; height:0;">
+                                    <button type="button" class="cb-calendar-icon-btn" id="cb-calendar-btn">
+                                        <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                                    </button>
+                                </div>
+                                <span class="cb-error-msg" id="cb-date-error"></span>
+                            </div>
+
+                            <!-- 2. Event Slot -->
+                            <div class="cb-field" id="cb-slot-field">
+                                <label>Event Slot</label>
+                                <div class="cb-dropdown-trigger" tabindex="0">
+                                    <span class="cb-placeholder">Select Slot</span>
+                                    <span class="cb-arrow"></span>
+                                </div>
+                                <div class="cb-dropdown-list">
+                                    <div class="cb-option" data-value="Morning Slot">Morning Slot</div>
+                                    <div class="cb-option" data-value="Evening Slot">Evening Slot</div>
+                                    <div class="cb-option" data-value="Full Day">Full Day</div>
+                                </div>
+                                <input type="hidden" id="cb-event-slot">
+                            </div>
+
+                            <!-- 3. Number of Guests -->
+                            <div class="cb-field" id="cb-guests-field">
+                                <label>No. of Guests</label>
+                                <div class="cb-dropdown-trigger" tabindex="0">
+                                    <span class="cb-placeholder">Select Count</span>
+                                    <span class="cb-arrow"></span>
+                                </div>
+                                <div class="cb-dropdown-list">
+                                    <div class="cb-option" data-value="50–100">50–100</div>
+                                    <div class="cb-option" data-value="100–200">100–200</div>
+                                    <div class="cb-option" data-value="200–400">200–400</div>
+                                    <div class="cb-option" data-value="400–600">400–600</div>
+                                    <div class="cb-option" data-value="600–1000">600–1000</div>
+                                    <div class="cb-option" data-value="1000+">1000+</div>
+                                </div>
+                                <input type="hidden" id="cb-guests">
+                            </div>
+
+                            <!-- 4. Event Type -->
+                            <div class="cb-field" id="cb-type-field">
+                                <label>Event Type</label>
+                                <div class="cb-dropdown-trigger" tabindex="0">
+                                    <span class="cb-placeholder">Select Type</span>
+                                    <span class="cb-arrow"></span>
+                                </div>
+                                <div class="cb-dropdown-list">
+                                    <div class="cb-option" data-value="Wedding">Wedding</div>
+                                    <div class="cb-option" data-value="Reception">Reception</div>
+                                    <div class="cb-option" data-value="Corporate Event">Corporate Event</div>
+                                    <div class="cb-option" data-value="Birthday Party">Birthday Party</div>
+                                    <div class="cb-option" data-value="Sangeet / Mehendi">Sangeet / Mehendi</div>
+                                    <div class="cb-option" data-value="Other">Other</div>
+                                </div>
+                                <input type="hidden" id="cb-event-type">
+                            </div>
+                        </div>
+
+                        <div class="check-btn-wrap">
+                            <button class="check-btn check-availability-btn" id="cb-check-btn">Check Availability</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 — EXPLORE EVENT EXPERIENCES -->
+        <section class="experience-section">
+            <h2 class="experience-title">Explore Event Experiences</h2>
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <img loading="lazy" src="./images/events/Grand%20Weddings.webp" alt="Grand Weddings">
+                    <div class="exp-overlay"></div>
+                    <div class="exp-content"><h3>Grand Weddings</h3></div>
+                </div>
+                <div class="exp-card">
+                    <img loading="lazy" src="./images/events/Corporate%20Events.webp" alt="Corporate Events">
+                    <div class="exp-overlay"></div>
+                    <div class="exp-content"><h3>Corporate Events</h3></div>
+                </div>
+                <div class="exp-card">
+                    <img loading="lazy" src="./images/events/Signature%20Parties.webp" alt="Signature Parties">
+                    <div class="exp-overlay"></div>
+                    <div class="exp-content"><h3>Signature Parties</h3></div>
+                </div>
+                <div class="exp-card">
+                    <img loading="lazy" src="./images/events/Anniversaries%20%26%20Cultural%20Gatherings.webp" alt="Anniversaries">
+                    <div class="exp-overlay"></div>
+                    <div class="exp-content"><h3>Anniversaries & Cultural Gatherings</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LUXURY EXTRA SECTIONS -->
+        <section class="booking-extra">
+          <div class="section-wrapper-extra">
+            
+            <!-- WHY CHOOSE -->
+            <div class="extra-heading-group">
+              <h2 class="extra-title">Why Choose Kodam Convention</h2>
+              <p class="extra-subtitle">Crafted for grand celebrations and seamless experiences</p>
+            </div>
+
+            <div class="feature-grid">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <h3>Grand Space</h3>
+                <p>Spacious venue accommodating large gatherings with ease, featuring column-less architecture for perfect views.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3M21 17h-2.1c-.5-1.1-1.4-2-2.5-2.5V4h-2v10h2v1H8v-1h2V4H8v10.5c-1.1.5-2 1.4-2.5 2.5H3.4C3.2 17.5 3 17.8 3 18v2c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-2c0-.2-.2-.5-.4-.6c-1.1-.3-1.6-.4-2-.4z"/></svg>
+                </div>
+                <h3>Fully Air Conditioned</h3>
+                <p>Comfortable indoor environment for all seasons with high-capacity central air conditioning systems.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <h3>Prime Location</h3>
+                <p>Conveniently located in the heart of Warangal, making it easily accessible for all your esteemed guests.</p>
+              </div>
+            </div>
+
+            <!-- PREMIUM STATS BAR -->
+            <div class="stats-bar">
+              <div class="stat-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                1000+ Guests
+              </div>
+              <div class="stat-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg>
+                Central AC
+              </div>
+              <div class="stat-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                Dining Hall
+              </div>
+              <div class="stat-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a2 2 0 0 1-2 2h-9"/></svg>
+                Event Support
+              </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS (FROM HOME PAGE) -->
+        <div class="feedbacks_section">
+            <div class="page_container">
+                <h2 class="section_title">Celebrations & Client Experiences</h2>
+                <div class="feedbacks_slider">
+                    <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer1.jpg" width="325" height="175" alt="Mohan Vamsi" title="Mohan Vamsi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>Nice convention center hall with decent maintenance. The staff was very punctual and ensured everything was perfectly arranged on time. It’s a fully air-conditioned venue with great aesthetics, and the dining hall is truly marvelous. Perfect choice for weddings and receptions.</p></div>
+<div class="feedback_author">Mohan Vamsi</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer2.jpg" width="325" height="175" alt="Raj" title="Raj" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>Nice air-conditioned function hall. Overall experience was good. Parking can be a bit challenging during large events, but the venue itself is well maintained and spacious.</p></div>
+<div class="feedback_author">Raj</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer3.jpg" width="325" height="175" alt="As Shankar" title="As Shankar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>It has a very large area suitable for any kind of convention. The environment is peaceful and the interior design is beautiful. Central air conditioning makes the experience very comfortable.</p></div>
+<div class="feedback_author">As Shankar</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer4.jpg" width="325" height="175" alt="Suresh Reddy" title="Suresh Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>A perfect venue for grand celebrations. The ambience, lighting, and space make every event feel luxurious and memorable.</p></div>
+<div class="feedback_author">Suresh Reddy</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer5.jpg" width="325" height="175" alt="Kavya Sri" title="Kavya Sri" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>Everything from decoration to management was handled professionally. Our family event turned out exactly how we imagined.</p></div>
+<div class="feedback_author">Kavya Sri</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer6.jpg" width="325" height="175" alt="Ramesh Kumar" title="Ramesh Kumar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>Spacious, elegant, and well-organized. One of the best convention halls in Warangal for weddings and large gatherings.</p></div>
+<div class="feedback_author">Ramesh Kumar</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer7.jpg" width="325" height="175" alt="Priya Nair" title="Priya Nair" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>The interiors are stunning and the atmosphere is very pleasant. Guests were impressed with the overall setup.</p></div>
+<div class="feedback_author">Priya Nair</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer8.jpg" width="325" height="175" alt="Harish Varma" title="Harish Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>Excellent service and smooth coordination. The team ensured everything ran perfectly without any stress.</p></div>
+<div class="feedback_author" class="feedback_author">Harish Varma</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer9.jpg" width="325" height="175" alt="Lakshmi Devi" title="Lakshmi Devi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>A beautiful place for hosting events. Clean, well-maintained, and very grand in appearance.</p></div>
+<div class="feedback_author" class="feedback_author">Lakshmi Devi</div>
+</div>                                                                    <div class="swiper-slide">
+<div class="image_block">
+<picture>
+    <img loading="lazy" src="./images/testimonials/customer10.jpg" width="325" height="175" alt="Kiran Teja" title="Kiran Teja" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+</picture>
+</div>
+<div class="feedback_text"> <p>Highly recommended for anyone planning a wedding or reception. Great experience from start to finish.</p></div>
+<div class="feedback_author">Kiran Teja</div>
+</div>
+                    </div>
+                    <div class="slider_nav_wrap">
+                        <button class="swiper-prev icon_prev" aria-label="previous slide"></button>
+                        <div class="nav_track"></div>
+                        <button class="swiper-next icon_next" aria-label="next slide"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="footer">
+    <div class="page_container">
+        <div class="footer_inner">
+            <div class="menu_left">
+                <ul class="main_menu">
+                                    <li>
+    <a class="" href="index.html">Home</a>
+    </li>                                    <li>
+    <a class="" href="booking.html">Plan Your Perfect Event</a>
+    </li>                                    <li>
+    <a class="" href="layouts/index.html">Explore Layouts</a>
+    </li>                                    <li>
+    <a class="" href="terms.html">Terms & Conditions</a>
+    </li>                                    <li>
+    <a class="" href="privacy.html">Privacy Policy</a>
+    </li>
+                            </ul>
+                            <div class="info_block">
+                    <div class="copyrights">
+                        <span>All Rights Reserved</span>
+                        <span>Kodam Convention ©2026</span>
+                    </div>
+                    <div class="developer" style="display: flex; align-items: center; justify-content: center;">
+                        Design and development
+                        <a href="https://mahadavdigital.com/" target="_blank" style="position: relative; display: inline-block; width: 180px; height: 20px; margin-left: 10px;">
+                            <img loading="lazy" src="./images/mahadav%20digital%20logo.svg" title="Mahadav Digital" alt="Mahadav Digital" style="position: absolute; height: 84px; width: max-content; max-width: none; top: 50%; left: 0; transform: translateY(-50%);">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_right">
+                <div class="right_inner">
+                    <style id="footer-logo-styles">
+                        html { scroll-behavior: smooth; }
+                        @media (min-width: 769px) {
+                            .footer .main_menu > li:first-child,
+                            .footer .secondary_menu > li:first-child {
+                                margin-top: 30px !important;
+                            }
+                        }
+                        .footer-logo img {
+                            width: 140px !important;
+                            height: auto !important;
+                            object-fit: contain !important;
+                            display: block !important;
+                            flex-shrink: 0 !important;
+                        }
+                        @media (max-width: 768px) {
+                            .footer-logo img {
+                                width: 110px !important;
+                            }
+                        }
+                    </style>
+                    <div class="logo_block footer-logo">
+                        <a href="index.html">
+                                                     <img loading="lazy" src="./images/Kodam-gold-Logo.png" alt="Kodam Convention" title="Kodam Convention">
+                        </a>
+                                            </div>
+                    <a href="booking.html" class="booking_btn">Booking</a>
+                    <div class="contact_block">
+                        <div class="contact_title">WHERE WE ARE</div>
+                        <div class="contact_info">
+                            Hunter Road, Hanamkonda,<br>
+                            Near Khamman Fly Over,<br>
+                            Warangal - 506001, Telangana
+                        </div>
+                    </div>
+                    <div class="contact_block">
+                        <div class="contact_info">
+                            <a href="tel:+918520025000">+91 85200 25000</a>
+                            <br>
+                                                                                                                                                                            <a href="mailto:kodamconvention@gmail.com">kodamconvention@gmail.com</a><br>
+                                                                                                                        </div>
+                        <a href="tel:+918520025000" class="simple_btn icon_next" aria-label="Call +91 85200 25000">Contact Us</a>
+                    </div>
+                    <ul class="socials_list">
+                                    <li>
+    <a class="icon_facebook" href="https://www.facebook.com/kodamconvention" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </li>                                    <li>
+    <a class="icon_instagram" href="https://www.instagram.com/kodamconvention/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>                                    <li>
+    <a class="icon_youtube" href="https://www.youtube.com/@kodamconvention5033" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </li>                            </ul>
+                            </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('%c © Kodam Convention, ' + new Date().getFullYear(), 'background: #000; color: #0cf;font-size:20px');
+    });
+</script>
+<script>
+    // ── GLOBAL FUNCTIONS (STEP 1) ──
+    window.openBookingPopup = function() {
+        const dateDisplay = document.getElementById('cb-event-date-display');
+        const dateError = document.getElementById('cb-date-error');
+
+        // Validate date first
+        if (!dateDisplay.value || dateDisplay.value.length < 10) {
+            dateDisplay.classList.add('cb-date-error');
+            if (dateError) {
+                dateError.textContent = 'Event Date is required (DD/MM/YYYY)';
+                dateError.classList.add('visible');
+            }
+            if (dateDisplay) dateDisplay.focus();
+            return;
+        }
+
+        const eventSlot = document.getElementById('cb-event-slot') ? document.getElementById('cb-event-slot').value : '';
+        const guests = document.getElementById('cb-guests') ? document.getElementById('cb-guests').value : '';
+        const eventType = document.getElementById('cb-event-type') ? document.getElementById('cb-event-type').value : '';
+
+        // Populate read-only popup data
+        document.getElementById('ro-date').textContent = dateDisplay.value || 'Not selected';
+        document.getElementById('ro-slot').textContent = eventSlot || 'Not selected';
+        document.getElementById('ro-guests').textContent = guests || 'Not selected';
+        document.getElementById('ro-type').textContent = eventType || 'Not selected';
+
+        // Open Modal
+        const modal = document.getElementById('cb-modal-overlay');
+        if (modal) modal.classList.add('active');
+    };
+
+    window.closeBookingPopup = function() {
+        const modal = document.getElementById('cb-modal-overlay');
+        if (modal) modal.classList.remove('active');
+    };
+
+    window.collectBookingData = function() {
+        const nameInput = document.getElementById('cb-user-name');
+        const phoneInput = document.getElementById('cb-user-phone');
+        const msgInput = document.getElementById('cb-user-msg');
+        const codeInput = document.getElementById('cb-country-code');
+
+        return {
+            date: document.getElementById('ro-date').textContent,
+            slot: document.getElementById('ro-slot').textContent,
+            guests: document.getElementById('ro-guests').textContent,
+            type: document.getElementById('ro-type').textContent,
+            name: nameInput ? nameInput.value.trim() : '',
+            phone: (codeInput ? codeInput.value : '+91') + ' ' + (phoneInput ? phoneInput.value.replace(/[^0-9]/g, '') : ''),
+            message: msgInput ? msgInput.value.trim() : ''
+        };
+    };
+
+    window.validateBookingData = function(data) {
+        const nameValid = data.name !== '';
+        const phoneClean = data.phone.replace(/[^0-9]/g, '');
+        // Check for at least 10 digits for the phone number
+        const phoneValid = phoneClean.length >= 10;
+
+        document.getElementById('err-name').style.display = nameValid ? 'none' : 'block';
+        document.getElementById('err-phone').style.display = phoneValid ? 'none' : 'block';
+
+        return nameValid && phoneValid;
+    };
+
+    window.submitToGoogleSheets = function(data) {
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSeNfH6EBNaqtU8JSEMV6zqRZgq2e8JZdL3IjZzQIdbfFY_Fjg/formResponse", {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body:
+                "entry.1373193098=" + encodeURIComponent(data.name) +
+                "&entry.1089583976=" + encodeURIComponent(data.phone) +
+                "&entry.DATE_ID=" + encodeURIComponent(data.date) +
+                "&entry.518329641=" + encodeURIComponent(data.slot) +
+                "&entry.1466311962=" + encodeURIComponent(data.guests) +
+                "&entry.926497588=" + encodeURIComponent(data.type) +
+                "&entry.1629751736=" + encodeURIComponent(data.message)
+        }).catch(function(e) { console.error('Form submit error:', e); });
+    };
+
+    window.handleWhatsAppRedirect = function(data) {
+        const message = "Hello Kodam Convention,\nI would like to check availability.\n\n" +
+            "Event Date: " + data.date + "\n" +
+            "Event Slot: " + data.slot + "\n" +
+            "Guests: " + data.guests + "\n" +
+            "Event Type: " + data.type + "\n\n" +
+            "Name: " + data.name + "\n" +
+            "Phone: " + data.phone + "\n" +
+            (data.message ? "\nMessage: " + data.message : "");
+
+        const whatsappNumber = "918520025000";
+        const whatsappUrl = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + encodeURIComponent(message) + "&lang=en";
+        window.open(whatsappUrl, '_blank');
+    };
+
+    // ── ATTACH LISTENERS (STEP 8) ──
+    document.addEventListener('DOMContentLoaded', function () {
+        // 1. Dropdown Logic
+        var allFields = document.querySelectorAll('.booking-page-form .cb-field');
+        allFields.forEach(function(field) {
+            var trigger = field.querySelector('.cb-dropdown-trigger');
+            var list = field.querySelector('.cb-dropdown-list');
+            var hidden = field.querySelector('input[type="hidden"]');
+            if (!trigger || !list) return;
+
+            trigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var wasOpen = field.classList.contains('open');
+                allFields.forEach(function(f) { f.classList.remove('open'); });
+                if (!wasOpen) field.classList.add('open');
+            });
+
+            var options = list.querySelectorAll('.cb-option');
+            options.forEach(function(opt) {
+                opt.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var val = opt.getAttribute('data-value');
+                    options.forEach(function(o) { o.classList.remove('selected'); });
+                    opt.classList.add('selected');
+                    var ph = trigger.querySelector('.cb-placeholder');
+                    if (ph) { ph.className = 'cb-selected-text'; ph.textContent = val; }
+                    if (hidden) hidden.value = val;
+                    field.classList.remove('open');
+                });
+            });
+        });
+        document.addEventListener('click', function() {
+            allFields.forEach(function(f) { f.classList.remove('open'); });
+        });
+
+        // 2. Date Guard Logic
+        const dateInput = document.getElementById('cb-event-date');
+        const dateDisplay = document.getElementById('cb-event-date-display');
+        const dateBtn = document.getElementById('cb-calendar-btn');
+        const dateError = document.getElementById('cb-date-error');
+
+        if (dateInput && dateDisplay) {
+            const today = new Date();
+            const todayStr = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+            const maxD = new Date();
+            maxD.setFullYear(today.getFullYear() + 1);
+            const maxStr = maxD.getFullYear() + '-' + String(maxD.getMonth() + 1).padStart(2, '0') + '-' + String(maxD.getDate()).padStart(2, '0');
+
+            dateInput.min = todayStr;
+            dateInput.max = maxStr;
+
+            dateDisplay.addEventListener('input', function(e) {
+                let val = e.target.value.replace(/\D/g, '');
+                if (val.length > 8) val = val.slice(0, 8);
+                let masked = '';
+                if (val.length > 0) masked += val.slice(0, 2);
+                if (val.length > 2) masked += '/' + val.slice(2, 4);
+                if (val.length > 4) masked += '/' + val.slice(4, 8);
+                e.target.value = masked;
+                dateDisplay.classList.remove('cb-date-error');
+                if (dateError) dateError.classList.remove('visible');
+                if (masked.length === 10) {
+                    const [d, m, y] = masked.split('/');
+                    const iso = `${y}-${m}-${d}`;
+                    if (!isNaN(new Date(iso).getTime())) dateInput.value = iso;
+                }
+            });
+
+            dateDisplay.addEventListener('blur', function() {
+                const val = dateDisplay.value;
+                if (!val) return;
+                if (val.length < 10) { clearDate(); return; }
+                const [d, m, y] = val.split('/').map(n => parseInt(n, 10));
+                if (isNaN(d) || isNaN(m) || isNaN(y) || y.toString().length !== 4) { clearDate(); return; }
+                const inputDate = new Date(y, m - 1, d);
+                if (inputDate < new Date(today.getFullYear(), today.getMonth(), today.getDate()) || inputDate > new Date(maxD.getFullYear(), maxD.getMonth(), maxD.getDate()) || m < 1 || m > 12 || d < 1 || d > 31) clearDate();
+            });
+
+            function clearDate() {
+                dateDisplay.value = ''; dateInput.value = ''; dateDisplay.classList.add('cb-date-error');
+                if (dateError) { dateError.textContent = 'Please enter a valid future date (DD/MM/YYYY) within 1 year'; dateError.classList.add('visible'); }
+            }
+
+            if (dateBtn) { dateBtn.addEventListener('click', function() { if (dateInput.showPicker) dateInput.showPicker(); else dateInput.click(); }); }
+            dateInput.addEventListener('change', function() {
+                if (dateInput.value) {
+                    const [y, m, d] = dateInput.value.split('-');
+                    dateDisplay.value = `${d}/${m}/${y}`;
+                    dateDisplay.classList.remove('cb-date-error');
+                    if (dateError) dateError.classList.remove('visible');
+                }
+            });
+        }
+
+        // 3. Attach Scoped Listeners (STEP 2, 3, 4, 9)
+        const checkBtn = document.querySelector('.booking-page .check-availability-btn');
+        if (checkBtn) {
+            checkBtn.addEventListener('click', function(e) { e.preventDefault(); window.openBookingPopup(); });
+        }
+
+        const closeBtn = document.querySelector('.booking-popup .close-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() { window.closeBookingPopup(); });
+        }
+
+        const whatsappBtn = document.querySelector('.booking-popup .whatsapp-btn');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function() {
+                const data = window.collectBookingData();
+                if (!window.validateBookingData(data)) return;
+                window.submitToGoogleSheets(data);
+                window.handleWhatsAppRedirect(data);
+                window.closeBookingPopup();
+            });
+        }
+
+        // Click outside to close
+        const modalOverlay = document.getElementById('cb-modal-overlay');
+        if (modalOverlay) {
+            document.body.appendChild(modalOverlay);
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) window.closeBookingPopup();
+            });
+        }
+    });
+
+    // ── TESTIMONIAL INDICATOR SYNC (FROM HOME PAGE) ──
+    (function() {
+        function initTestimonialSync() {
+            const swiperEl = document.querySelector('.feedbacks_slider');
+            if (!swiperEl) return;
+            
+            // Wait for swiper to be attached to the DOM element
+            const swiper = swiperEl.swiper;
+            if (!swiper) {
+                setTimeout(initTestimonialSync, 150);
+                return;
+            }
+
+            const indicator = swiperEl.querySelector('.swiper-scrollbar-drag');
+            const track = swiperEl.querySelector('.nav_track');
+            
+            if (!indicator || !track) return;
+
+            // Total testimonials count
+            const total = 10; 
+
+            function updateIndicator() {
+                const currentIndex = swiper.realIndex;
+                const moveRatio = currentIndex * 100;
+                indicator.style.setProperty('transform', `translateX(${moveRatio}%) translateY(-50%)`, 'important');
+            }
+
+            // Sync on change (manual and auto)
+            swiper.on('slideChange', updateIndicator);
+            
+            // Initial sync
+            updateIndicator();
+        }
+
+        // Start synchronization logic
+        if (document.readyState === 'complete') {
+            initTestimonialSync();
+        } else {
+            window.addEventListener('load', initTestimonialSync);
+        }
+    })();
+</script>
+
+                <!-- POPUP MODAL HTML -->
+                <div class="cb-modal-overlay booking-popup" id="cb-modal-overlay">
+                    <div class="cb-modal">
+                        <button type="button" class="cb-modal-close close-btn" id="cb-modal-close">&times;</button>
+                        <div class="cb-modal-title">Confirm Your Booking Details</div>
+                        
+                        <!-- Readonly Info -->
+                        <div class="cb-modal-readonly">
+                            <div class="cb-val-row"><span class="cb-val-label">Date:</span><span class="cb-val-data" id="ro-date"></span></div>
+                            <div class="cb-val-row"><span class="cb-val-label">Slot:</span><span class="cb-val-data" id="ro-slot"></span></div>
+                            <div class="cb-val-row"><span class="cb-val-label">Guests:</span><span class="cb-val-data" id="ro-guests"></span></div>
+                            <div class="cb-val-row"><span class="cb-val-label">Type:</span><span class="cb-val-data" id="ro-type"></span></div>
+                        </div>
+
+                        <!-- User Inputs -->
+                        <div class="cb-modal-input-group">
+                            <label for="cb-user-name">Name *</label>
+                            <input type="text" id="cb-user-name" placeholder="Enter your full name">
+                            <div class="cb-modal-error" id="err-name">Please enter your name</div>
+                        </div>
+                        <div class="cb-modal-input-group">
+                            <label for="cb-user-phone">Phone Number *</label>
+                            <div style="display: flex; gap: 8px;">
+                                <select id="cb-country-code" style="width: auto; flex-shrink: 0; padding: 12px 10px; border-radius: 8px; border: 1.5px solid #d4d4d4; font-size: 1rem; cursor: pointer; outline: none; background: #fff; font-family: inherit;">
+                                    <option value="+91">+91 (IND)</option>
+                                    <option value="+1">+1 (USA/CAN)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+61">+61 (AUS)</option>
+                                    <option value="+971">+971 (UAE)</option>
+                                </select>
+                                <input type="tel" id="cb-user-phone" placeholder="Enter 10 digit number" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            </div>
+                            <div class="cb-modal-error" id="err-phone">Please enter a valid 10-digit phone number</div>
+                        </div>
+                        <div class="cb-modal-input-group" style="margin-bottom: 0;">
+                            <label for="cb-user-msg">Message (Optional)</label>
+                            <textarea id="cb-user-msg" placeholder="Any special requests?"></textarea>
+                        </div>
+                        
+                        <div class="cb-modal-helper">
+                            You’ll be redirected to WhatsApp<br>
+                            just tap ‘Send’ to confirm your enquiry. Our team will respond shortly.
+                        </div>
+
+                        <button type="button" class="cb-continue-btn whatsapp-btn" id="cb-continue-btn">Continue to WhatsApp</button>
+                    </div>
+                </div>
+
+    </div>
+</main>
+<script type="module" src="./js/swiper.min-DzbSIQOy.js"></script>
+<script type="module" src="./js/datepicker.min-CSQBMPN6.js"></script>
+<script type="module" src="./js/nice-select2-nDJw-G_M.js"></script>
+<script type="module" src="./js/index-C-NOxOjA.js"></script>
+<script type="module" src="./js/main-Cy-mEiTQ.js"></script>
+<script>
+    // Manual Swiper Initialization for Booking Page
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Swiper !== 'undefined') {
+            new Swiper('.feedbacks_slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-next',
+                    prevEl: '.swiper-prev',
+                },
+                scrollbar: {
+                    el: '.nav_track',
+                    draggable: true,
+                },
+            });
+        }
+    });
+</script>
+<script src="./js/universal-buttons.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.hash) {
+    const element = document.querySelector(window.location.hash);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }
+});
+</script>
+</body></html>

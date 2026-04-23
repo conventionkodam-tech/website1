@@ -1,0 +1,61 @@
+/* Home Button - Standardized Styling for all pages */
+.header .lg_block .home-btn {
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer;
+    
+    /* Reference Values from Booking/Menu Buttons */
+    height: 48px; 
+    padding: 0 20px;
+    border-radius: 28px;
+    font-size: 140%;
+    line-height: 20px;
+    font-family: montserratarm-medium, montserrat-bold;
+    
+    /* Lighter, Clean Design */
+    background: rgba(224, 225, 209, 0.05);
+    border: 1px solid rgba(224, 225, 209, 0.4);
+    color: var(--lightGreen, #E0E1D1);
+    
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1601px) {
+    .header .lg_block .home-btn {
+        height: 56px;
+        padding: 0 24px;
+        font-size: 160%;
+        line-height: 24px;
+    }
+}
+
+/* Remove Dropdown Arrow from Home Button */
+.header .lg_block .home-btn::after {
+    content: none !important;
+    display: none !important;
+}
+
+.header .lg_block .home-btn:hover {
+    background: rgba(224, 225, 209, 0.15);
+    border-color: #ffffff;
+    color: #ffffff !important;
+}
+
+/* Header Logo Link */
+.main_logo a {
+    display: block;
+    line-height: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+.main_logo a img {
+    border: none;
+}

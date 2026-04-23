@@ -1,0 +1,20 @@
+{
+  "name": "kodam-convention-website",
+  "version": "2.0.0",
+  "description": "Premium Convention Destination in Warangal, Telangana",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "convention",
+    "venue",
+    "warangal",
+    "telangana",
+    "events",
+    "weddings"
+  ],
+  "author": "Kodam Convention",
+  "license": "ISC"
+}

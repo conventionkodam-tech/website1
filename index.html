@@ -483,27 +483,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         .feedbacks_slider .nav_track {
-            display: block !important;
-            margin: 0 !important; /* Handled by flex gap */
-            width: 250px !important; 
-            background: rgba(0, 69, 53, 0.1) !important;
-            height: 2px !important; /* Thin, elegant track */
-            border-radius: 1px !important;
-            position: relative;
-            z-index: 5;
-            cursor: pointer;
+            display: none !important; /* Removed as requested */
         }
 
         /* Swiper Scrollbar Handle (Traveling Line) */
-        .feedbacks_slider .nav_track .swiper-scrollbar-drag {
-            background: #004535 !important;
-            height: 400% !important; /* Slightly taller than track */
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-            border-radius: 4px !important;
-            cursor: grab;
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-        }
+        /* Indicator removed */
 
         @media screen and (max-width: 768px) {
             .feedbacks_section { padding: 80px 0 !important; }
@@ -869,6 +853,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
     </style>
 
+    <style id="mobile-menu-alignment-fix">
+        @media screen and (max-width: 768px) {
+            /* 1. CONTAINER ALIGNMENT */
+            .menu_inner, .menu-container, .menu-left, .main_menu {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                text-align: center !important;
+            }
+
+            /* 2. TEXT CENTERING & 3. ICON / ARROW HANDLING */
+            .main_menu li {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                position: relative !important;
+                padding: 15px 0 !important;
+                margin: 0 !important;
+                border: none !important;
+            }
+
+            .main_menu li .text {
+                width: 100% !important;
+                text-align: center !important;
+                display: block !important;
+                padding: 0 50px !important; /* Symmetric buffer */
+                margin: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            .main_menu li .dot {
+                display: none !important; /* Eliminate text shift */
+            }
+
+            .main_menu li .arrow {
+                position: absolute !important;
+                right: 30px !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                margin: 0 !important;
+            }
+
+            /* Secondary menu centering */
+            .secondary_menu {
+                width: 100% !important;
+                margin: 30px 0 0 0 !important;
+                padding: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            .secondary_menu li {
+                width: 100% !important;
+                text-align: center !important;
+                margin: 12px 0 !important;
+            }
+        }
+    </style>
     <link rel="icon" type="image/png" href="./images/Kodam-gold-Logo.png">
     <link rel="shortcut icon" href="./images/Kodam-gold-Logo.png">
     <link rel="apple-touch-icon" href="./images/Kodam-gold-Logo.png">
@@ -881,6 +928,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <body class="body-en body-page body-page-1 " id="top">
     
     
+    
                          <div class="header">
 	<div class="header_inner">
 		<div class="main_logo">
@@ -891,7 +939,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="tel:+918520025000" class="secondary_light icon_phone">+91 85200 25000</a>
 
                     <div class="lg_block">
-    <a href="index.html" class="drop_btn home-btn">Home</a>
+    <a href="index.html" class="home-btn">Home</a>
 </div>                
 		
 		<a href="booking.html" class="book_btn secondary_btn" aria-label="booking">Booking</a>
@@ -916,41 +964,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="btns_container"></div>
 			<div class="page_container">
 				<div class="menu_left">
+                    <ul class="main_menu">
+                        <li>
+                            <span class="dot"></span>
+                            <a href="index.html" class="text">Home</a>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="booking.html" class="text">Plan Your Perfect Event</a>
+                            <span class="arrow">→</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="layouts/index.html" class="text">Explore Layouts</a>
+                            <span class="arrow">→</span>
+                        </li>
                     
-                    <div class="menu-container">
-                                                 <div class="menu-left">
-                            <ul class="main_menu">
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="index.html" class="text">Home</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="booking.html" class="text">Plan Your Perfect Event</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="layouts/index.html" class="text">Explore Layouts</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                            
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="terms.html" class="text">Terms & Conditions</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="privacy.html" class="text">Privacy Policy</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                
-            				</div>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="terms.html" class="text">Terms & Conditions</a>
+                            <span class="arrow">→</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="privacy.html" class="text">Privacy Policy</a>
+                            <span class="arrow">→</span>
+                        </li>
+                    </ul>
+				</div>
 				<div class="menu_right">
 					<div class="contact_block">
 						<div class="contact_title">WHERE WE ARE</div>
@@ -2110,6 +2151,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
+    
+<div class="facilities">
+    <div class="social-video-content">
+        <h2>Experience Kodam in Motion</h2>
+        <p>Real celebrations. Real emotions. Step inside Kodam Convention.</p>
+
+        <div class="video-wrapper">
+            <div class="video-track">
+                <!-- Original Set (14) -->
+                <div class="video-card"><video src="./images/videos/video1.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video2.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video3.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video4.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video5.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video6.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video7.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video8.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video9.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video10.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video11.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video12.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video13.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video14.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                
+                <!-- Duplicate Set (14) -->
+                <div class="video-card"><video src="./images/videos/video1.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video2.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video3.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video4.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video5.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video6.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video7.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video8.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video9.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video10.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video11.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video12.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video13.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+                <div class="video-card"><video src="./images/videos/video14.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -2635,48 +2719,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
     
-<div class="facilities">
-    <div class="social-video-content">
-        <h2>Experience Kodam in Motion</h2>
-        <p>Real celebrations. Real emotions. Step inside Kodam Convention.</p>
-
-        <div class="video-wrapper">
-            <div class="video-track">
-                <!-- Original Set (14) -->
-                <div class="video-card"><video src="./images/videos/video1.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video2.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video3.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video4.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video5.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video6.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video7.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video8.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video9.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video10.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video11.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video12.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video13.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video14.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                
-                <!-- Duplicate Set (14) -->
-                <div class="video-card"><video src="./images/videos/video1.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video2.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video3.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video4.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video5.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video6.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video7.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video8.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video9.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video10.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video11.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video12.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video13.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-                <div class="video-card"><video src="./images/videos/video14.mp4" autoplay muted loop playsinline></video><button class="video-sound-btn">🔇</button></div>
-            </div>
-        </div>
-    </div>
-</div>                                                
+                                                
             
 
                                         
@@ -2690,7 +2733,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Arjun Reddy1.jpg" width="325" height="175" alt="Arjun Reddy" title="Arjun Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Arjun Reddy1.webp" width="325" height="175" alt="Arjun Reddy" title="Arjun Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>Nice convention center hall with decent maintenance. The staff was very punctual and ensured everything was perfectly arranged on time. It’s a fully air-conditioned venue with great aesthetics, and the dining hall is truly marvelous. Perfect choice for weddings and receptions.</p></div>
@@ -2698,7 +2741,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Ananya Sharma2.jpg" width="325" height="175" alt="Ananya Sharma" title="Ananya Sharma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Ananya Sharma2.webp" width="325" height="175" alt="Ananya Sharma" title="Ananya Sharma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>Nice air-conditioned function hall. Overall experience was good. Parking can be a bit challenging during large events, but the venue itself is well maintained and spacious.</p></div>
@@ -2706,7 +2749,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Karthik Varma3.jpg" width="325" height="175" alt="Karthik Varma" title="Karthik Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Karthik Varma3.webp" width="325" height="175" alt="Karthik Varma" title="Karthik Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>It has a very large area suitable for any kind of convention. The environment is peaceful and the interior design is beautiful. Central air conditioning makes the experience very comfortable.</p></div>
@@ -2714,7 +2757,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Rohit 4.jpg" width="325" height="175" alt="Rohit" title="Rohit" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Rohit 4.webp" width="325" height="175" alt="Rohit" title="Rohit" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>A perfect venue for grand celebrations. The ambience, lighting, and space make every event feel luxurious and memorable.</p></div>
@@ -2722,7 +2765,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Priya Reddy5.jpg" width="325" height="175" alt="Priya Reddy" title="Priya Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Priya Reddy5.webp" width="325" height="175" alt="Priya Reddy" title="Priya Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>Everything from decoration to management was handled professionally. Our family event turned out exactly how we imagined.</p></div>
@@ -2730,7 +2773,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Vikram Rao6.jpg" width="325" height="175" alt="Vikram Rao" title="Vikram Rao" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Vikram Rao6.webp" width="325" height="175" alt="Vikram Rao" title="Vikram Rao" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>Spacious, elegant, and well-organized. One of the best convention halls in Warangal for weddings and large gatherings.</p></div>
@@ -2738,7 +2781,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Sneha Varma7.jpg" width="325" height="175" alt="Sneha Varma" title="Sneha Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Sneha Varma7.webp" width="325" height="175" alt="Sneha Varma" title="Sneha Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>The interiors are stunning and the atmosphere is very pleasant. Guests were impressed with the overall setup.</p></div>
@@ -2746,7 +2789,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Sandeep Kumar8.jpg" width="325" height="175" alt="Sandeep Kumar" title="Sandeep Kumar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Sandeep Kumar8.webp" width="325" height="175" alt="Sandeep Kumar" title="Sandeep Kumar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>Excellent service and smooth coordination. The team ensured everything ran perfectly without any stress.</p></div>
@@ -2754,7 +2797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Kavya Rao9.jpg" width="325" height="175" alt="Kavya Rao" title="Kavya Rao" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Kavya Rao9.webp" width="325" height="175" alt="Kavya Rao" title="Kavya Rao" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>A beautiful place for hosting events. Clean, well-maintained, and very grand in appearance.</p></div>
@@ -2762,7 +2805,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>                                                                    <div class="swiper-slide">
     <div class="image_block">
         <picture>
-            <img loading="lazy" src="./images/testimonial/Swathi10.jpg" width="325" height="175" alt="Swathi" title="Swathi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+            <img loading="eager" src="./images/testimonials/Swathi10.webp" width="325" height="175" alt="Swathi" title="Swathi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
         </picture>
     </div>
     <div class="feedback_text"> <p>Highly recommended for anyone planning a wedding or reception. Great experience from start to finish.</p></div>
@@ -2781,80 +2824,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
     <script id="testimonial-slider-fix-and-sync">
     document.addEventListener('DOMContentLoaded', function() {
-        (function() {
-            function initTestimonialSystem() {
-                const swiperEl = document.querySelector('.feedbacks_slider');
-                if (!swiperEl) return;
-                
-                // If main script already initialized it, we might need to fix it
-                if (swiperEl.swiper) {
-                    const s = swiperEl.swiper;
-                    // Fix effect and drag if it's currently fade (as in the main bundle)
-                    if (s.params.effect === 'fade') {
-                        s.destroy(true, true);
-                        setupSwiper(swiperEl);
-                        return;
-                    }
-                    attachSyncLogic(s, swiperEl);
-                } else {
-                    // Main script hasn't run yet, or we'll initialize it ourselves
-                    // Wait a bit to let the main script attempt first, then we'll intercept
-                    setTimeout(initTestimonialSystem, 200);
+        let testimonialSwiper;
+        const swiperEl = document.querySelector('.feedbacks_slider');
+        const prevBtn = document.querySelector('.swiper-prev');
+        const nextBtn = document.querySelector('.swiper-next');
+
+        function initSwiper() {
+            if (typeof Swiper === 'undefined') {
+                setTimeout(initSwiper, 100);
+                return;
+            }
+
+            if (swiperEl.swiper) swiperEl.swiper.destroy(true, true);
+
+            testimonialSwiper = new Swiper('.feedbacks_slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                speed: 600,
+                grabCursor: true,
+                simulateTouch: true,
+                threshold: 10,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
                 }
-            }
+            });
 
-            function setupSwiper(el) {
-                const newSwiper = new Swiper(el, {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    loop: true,
-                    speed: 1000,
-                    grabCursor: true,
-                    simulateTouch: true,
-                    threshold: 5,
-                    preventClicks: true,
-                    preventClicksPropagation: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false
-                    },
-                    navigation: {
-                        nextEl: '.swiper-next',
-                        prevEl: '.swiper-prev',
-                    },
-                    scrollbar: {
-                        el: '.nav_track',
-                        draggable: true,
-                        dragSize: 'auto'
-                    }
-                });
-                attachSyncLogic(newSwiper, el);
-            }
+            // Keep Arrow Buttons Working
+            if (prevBtn) prevBtn.addEventListener('click', () => testimonialSwiper.slidePrev());
+            if (nextBtn) nextBtn.addEventListener('click', () => testimonialSwiper.slideNext());
+        }
 
-            function attachSyncLogic(swiper, swiperEl) {
-                const indicator = swiperEl.querySelector('.swiper-scrollbar-drag');
-                if (!indicator) return;
-
-                function updateIndicator() {
-                    const currentIndex = swiper.realIndex;
-                    // Move indicator across the track (10 slides = 10% movement per slide)
-                    const moveRatio = currentIndex * 100;
-                    indicator.style.setProperty('transform', `translateX(${moveRatio}%) translateY(-50%)`, 'important');
-                }
-
-                swiper.on('slideChange', updateIndicator);
-                swiper.on('transitionEnd', updateIndicator);
-                updateIndicator();
-            }
-
-            if (document.readyState === 'complete') {
-                initTestimonialSystem();
-            } else {
-                window.addEventListener('load', initTestimonialSystem);
-            }
-        })();
+        initSwiper();
     });
-</script>
+    </script>
                                         
                             
     
@@ -2980,59 +2984,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer_inner">
             <div class="menu_left">
                 <ul class="main_menu">
-                                    <li>
-    <a class="" href="index.html">Home</a>
-    </li>                                    <li>
-    <a class="" href="booking.html">Plan Your Perfect Event</a>
-    </li>                                    <li>
-    <a class="" href="layouts/index.html">Explore Layouts</a>
-    </li>                                    <li>
-    <a class="" href="terms.html">Terms & Conditions</a>
-    </li>                                    <li>
-    <a class="" href="privacy.html">Privacy Policy</a>
-    </li>
-                            </ul>
-                            <div class="info_block">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Plan Your Perfect Event</a></li>
+                    <li><a href="layouts/index.html">Explore Layouts</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+                <div class="info_block">
                     <div class="copyrights">
                         <span>All Rights Reserved</span>
                         <span>Kodam Convention ©2026</span>
                     </div>
-                    <div class="developer" style="display: flex; align-items: center; justify-content: center;">
+                    <div class="developer">
                         Design and development
-                        <a href="https://mahadavdigital.com/" target="_blank" style="position: relative; display: inline-block; width: 180px; height: 20px; margin-left: 10px;">
-                            <img loading="lazy" src="./images/mahadav%20digital%20logo.svg" title="Mahadav Digital" alt="Mahadav Digital" style="position: absolute; height: 84px; width: max-content; max-width: none; top: 50%; left: 0; transform: translateY(-50%);">
+                        <a href="https://mahadavdigital.com/" target="_blank">
+                            <img src="./images/mahadav digital logo.png" alt="Mahadav Digital">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="menu_right">
                 <div class="right_inner">
-                    <style id="footer-logo-styles">
-                        html { scroll-behavior: smooth; }
-                        @media (min-width: 769px) {
-                            .footer .main_menu > li:first-child,
-                            .footer .secondary_menu > li:first-child {
-                                margin-top: 30px !important;
-                            }
-                        }
-                        .footer-logo img {
-                            width: 140px !important;
-                            height: auto !important;
-                            object-fit: contain !important;
-                            display: block !important;
-                            flex-shrink: 0 !important;
-                        }
-                        @media (max-width: 768px) {
-                            .footer-logo img {
-                                width: 110px !important;
-                            }
-                        }
-                    </style>
                     <div class="logo_block footer-logo">
-                        <a href="index.html">
-                                                    <img loading="lazy" src="./images/Kodam-gold-Logo.png" alt="Kodam Convention" title="Kodam Convention">
-                        </a>
-                                            </div>
+                        <img loading="lazy" src="./images/Kodam-gold-Logo.png" alt="Kodam Convention" title="Kodam Convention">
+                    </div>
                     <a href="booking.html" class="booking_btn">Booking</a>
                     <div class="contact_block">
                         <div class="contact_title">WHERE WE ARE</div>
@@ -3046,26 +3021,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="contact_info">
                             <a href="tel:+918520025000">+91 85200 25000</a>
                             <br>
-                                                                                                                                                                            <a href="mailto:kodamconvention@gmail.com">kodamconvention@gmail.com</a><br>
-                                                                                                                        </div>
+                            <a href="mailto:kodamconvention@gmail.com">kodamconvention@gmail.com</a><br>
+                        </div>
                         <a href="tel:+918520025000" class="simple_btn icon_next" aria-label="Call +91 85200 25000">Contact Us</a>
                     </div>
                     <ul class="socials_list">
-                                    <li>
-    <a class="icon_facebook" href="https://www.facebook.com/kodamconvention" target="_blank" rel="noopener noreferrer">Facebook</a>
-    </li>                                    <li>
-    <a class="icon_instagram" href="https://www.instagram.com/kodamconvention/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </li>                                    <li>
-    <a class="icon_youtube" href="https://www.youtube.com/@kodamconvention5033" target="_blank" rel="noopener noreferrer">YouTube</a>
-    </li>                            </ul>
-                            </div>
-                
+                        <li><a class="icon_facebook" href="https://www.facebook.com/kodamconvention" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a class="icon_instagram" href="https://www.instagram.com/kodamconvention/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a class="icon_youtube" href="https://www.youtube.com/@kodamconvention5033" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-                    </div>
     </div>
 </div>
 

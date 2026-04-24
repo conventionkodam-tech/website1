@@ -55,6 +55,11 @@
         .chat-float-btn svg { width: 24px; height: 24px; fill: white; margin-right: 12px; }
         .chat-float-btn .text { font-size: 1.1rem; font-weight: 700; font-family: inherit; color: white; }
         
+        /* ── VISIBILITY LOGIC ── */
+        .whatsapp-float, .chat-float-btn {
+            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        }
+        
         .chat-notification-dot {
             position: absolute;
             top: -2px;
@@ -347,6 +352,38 @@
                 window.open(waUrl, '_blank');
             });
         }
+
+        // ── FOOTER VISIBILITY LOGIC ──
+        (function() {
+            const footer = document.querySelector(".footer");
+            const whatsappBtn = document.querySelector(".whatsapp-float");
+            const chatBtn = document.querySelector(".chat-float-btn");
+
+            if (!footer || !whatsappBtn || !chatBtn) return;
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Footer visible → hide buttons
+                            whatsappBtn.style.opacity = "0";
+                            whatsappBtn.style.pointerEvents = "none";
+                            chatBtn.style.opacity = "0";
+                            chatBtn.style.pointerEvents = "none";
+                        } else {
+                            // Footer not visible → show buttons
+                            whatsappBtn.style.opacity = "1";
+                            whatsappBtn.style.pointerEvents = "auto";
+                            chatBtn.style.opacity = "1";
+                            chatBtn.style.pointerEvents = "auto";
+                        }
+                    });
+                },
+                { threshold: 0.1 } // Hide as soon as footer starts appearing
+            );
+
+            observer.observe(footer);
+        })();
     }
 
     if (document.readyState === 'loading') {

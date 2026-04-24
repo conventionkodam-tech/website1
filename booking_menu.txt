@@ -1,0 +1,41 @@
+				
+		
+		<div class="menu_inner">
+			<div class="btns_container"></div>
+			<div class="page_container">
+				<div class="menu_left">
+                    
+                    <div class="menu-container">
+                                                <div class="menu-left">
+                            <ul class="main_menu">
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="index.html" class="text">Home</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="booking.html" class="text">Plan Your Perfect Event</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="layouts/index.html" class="text">Explore Layouts</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                            
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="terms.html" class="text">Terms & Conditions</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                                <li>
+                                    <span class="dot"></span>
+                                    <a href="privacy.html" class="text">Privacy Policy</a>
+                                    <span class="arrow">→</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+            				</div>

@@ -1,61 +1,123 @@
-/* Home Button - Standardized Styling for all pages */
+/* Navigation Custom Overrides - Reverted to "Good" Version */
+.main_logo a {
+    display: block;
+    line-height: 0;
+}
+
+/* Home Button - Styled to match Booking/Menu buttons */
 .header .lg_block .home-btn {
-    text-decoration: none !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    cursor: pointer;
-    
-    /* Reference Values from Booking/Menu Buttons */
-    height: 48px; 
-    padding: 0 20px;
-    border-radius: 28px;
-    font-size: 140%;
-    line-height: 20px;
-    font-family: montserratarm-medium, montserrat-bold;
-    
-    /* Lighter, Clean Design */
-    background: rgba(224, 225, 209, 0.05);
-    border: 1px solid rgba(224, 225, 209, 0.4);
-    color: var(--lightGreen, #E0E1D1);
-    
-    text-transform: none !important;
-    letter-spacing: 0.5px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    z-index: 2;
-    box-sizing: border-box;
+    height: 48px !important;
+    padding: 0 20px !important;
+    border: 1px solid var(--lightGreen, #E0E1D1) !important;
+    border-radius: 28px !important;
+    background: transparent !important;
+    color: var(--lightGreen, #E0E1D1) !important;
+    font-size: 1.4rem !important;
+    font-family: montserratarm-medium, montserrat-bold !important;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    text-transform: capitalize !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    white-space: nowrap !important;
+}
+
+.header .lg_block .home-btn:hover {
+    background: var(--lightGreen, #E0E1D1) !important;
+    color: #262626 !important;
 }
 
 @media screen and (min-width: 1601px) {
     .header .lg_block .home-btn {
-        height: 56px;
-        padding: 0 24px;
-        font-size: 160%;
-        line-height: 24px;
+        height: 56px !important;
+        padding: 0 24px !important;
+        font-size: 1.6rem !important;
+        line-height: 24px !important;
     }
 }
 
-/* Remove Dropdown Arrow from Home Button */
-.header .lg_block .home-btn::after {
-    content: none !important;
-    display: none !important;
+/* Visibility Fixes */
+@media screen and (max-width: 768px) {
+    .header .lg_block {
+        display: flex !important;
+        width: auto !important;
+        margin-right: 15px !important;
+        margin-left: 0 !important;
+        align-items: center !important;
+    }
+}
+/* Footer Custom Overrides - Original Design */
+.footer .booking_btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1.5px solid #fff !important;
+    border-radius: 999px !important;
+    padding: 10px 35px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    margin-bottom: 30px !important;
+    height: auto !important;
+    line-height: normal !important;
 }
 
-.header .lg_block .home-btn:hover {
-    background: rgba(224, 225, 209, 0.15);
-    border-color: #ffffff;
-    color: #ffffff !important;
+.footer .booking_btn:hover {
+    background: #fff !important;
+    color: #004535 !important;
 }
 
-/* Header Logo Link */
-.main_logo a {
-    display: block;
-    line-height: 0;
-    text-decoration: none;
-    border: none;
-    outline: none;
+.footer .developer img {
+    transition: transform 0.3s ease;
 }
-.main_logo a img {
-    border: none;
+
+.footer .developer a:hover img {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .footer .logo_block img {
+        height: 110px !important; /* Matches reference Image 2 */
+    }
+    
+    /* Hide navigation links in mobile footer */
+    .footer .main_menu {
+        display: none !important;
+    }
+
+    .footer .menu_left {
+        padding: 30px 20px !important;
+        background: transparent !important; /* Remove background if any */
+    }
+
+    .footer .info_block {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer .copyrights span {
+        display: inline !important;
+    }
+
+    .footer .copyrights span:first-child::after {
+        content: " " !important;
+    }
+    
+    .footer .developer {
+        margin-top: 20px !important;
+        font-size: 1.1rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+    
+    .footer .developer img {
+        height: 30px !important;
+    }
 }

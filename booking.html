@@ -9,6 +9,7 @@
     <link rel="icon" href="./images/Kodam-gold-Logo.png?v=1">
     
     
+    
     <link rel="preload" as="image" href="./images/weddings.jpg-2400x_-quality%2875%29-webp%2895%29-o%28jpg%29.webp">
     <link rel="preload" as="style" href="./css/index-BOLahH51.css">
     <link href="./css/datepicker-CKKEloXK.css" rel="stylesheet">
@@ -731,27 +732,11 @@
         }
 
         .feedbacks_slider .nav_track {
-            display: block !important;
-            margin: 0 !important; /* Handled by flex gap */
-            width: 250px !important; 
-            background: rgba(0, 69, 53, 0.1) !important;
-            height: 2px !important; /* Thin, elegant track */
-            border-radius: 1px !important;
-            position: relative;
-            z-index: 5;
-            cursor: pointer;
+            display: none !important; /* Removed as requested */
         }
 
         /* Swiper Scrollbar Handle (Traveling Line) */
-        .feedbacks_slider .nav_track .swiper-scrollbar-drag {
-            background: #004535 !important;
-            height: 400% !important; /* Slightly taller than track */
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-            border-radius: 4px !important;
-            cursor: grab;
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-        }
+        /* Indicator removed */
 
         @media screen and (max-width: 768px) {
             .feedbacks_section { padding: 80px 0 !important; }
@@ -939,6 +924,69 @@
         }
     </style>
 
+    <style id="mobile-menu-alignment-fix">
+        @media screen and (max-width: 768px) {
+            /* 1. CONTAINER ALIGNMENT */
+            .menu_inner, .menu-container, .menu-left, .main_menu {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                text-align: center !important;
+            }
+
+            /* 2. TEXT CENTERING & 3. ICON / ARROW HANDLING */
+            .main_menu li {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                position: relative !important;
+                padding: 15px 0 !important;
+                margin: 0 !important;
+                border: none !important;
+            }
+
+            .main_menu li .text {
+                width: 100% !important;
+                text-align: center !important;
+                display: block !important;
+                padding: 0 50px !important; /* Symmetric buffer */
+                margin: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            .main_menu li .dot {
+                display: none !important; /* Eliminate text shift */
+            }
+
+            .main_menu li .arrow {
+                position: absolute !important;
+                right: 30px !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                margin: 0 !important;
+            }
+
+            /* Secondary menu centering */
+            .secondary_menu {
+                width: 100% !important;
+                margin: 30px 0 0 0 !important;
+                padding: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            .secondary_menu li {
+                width: 100% !important;
+                text-align: center !important;
+                margin: 12px 0 !important;
+            }
+        }
+    </style>
     <link rel="icon" type="image/png" href="./images/Kodam-gold-Logo.png">
     <link rel="shortcut icon" href="./images/Kodam-gold-Logo.png">
     <link rel="apple-touch-icon" href="./images/Kodam-gold-Logo.png">
@@ -960,7 +1008,7 @@
         <a href="tel:+918520025000" class="secondary_light icon_phone">+91 85200 25000</a>
 
                     <div class="lg_block">
-    <a href="index.html" class="drop_btn home-btn">Home</a>
+    <a href="index.html" class="home-btn">Home</a>
 </div>                
 		
 		<a href="booking.html" class="book_btn secondary_btn" aria-label="booking">Booking</a>
@@ -985,41 +1033,34 @@
 			<div class="btns_container"></div>
 			<div class="page_container">
 				<div class="menu_left">
+                    <ul class="main_menu">
+                        <li>
+                            <span class="dot"></span>
+                            <a href="index.html" class="text">Home</a>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="booking.html" class="text">Plan Your Perfect Event</a>
+                            <span class="arrow">→</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="layouts/index.html" class="text">Explore Layouts</a>
+                            <span class="arrow">→</span>
+                        </li>
                     
-                    <div class="menu-container">
-                                                <div class="menu-left">
-                            <ul class="main_menu">
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="index.html" class="text">Home</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="booking.html" class="text">Plan Your Perfect Event</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="layouts/index.html" class="text">Explore Layouts</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                            
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="terms.html" class="text">Terms & Conditions</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                                <li>
-                                    <span class="dot"></span>
-                                    <a href="privacy.html" class="text">Privacy Policy</a>
-                                    <span class="arrow">→</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                
-            				</div>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="terms.html" class="text">Terms & Conditions</a>
+                            <span class="arrow">→</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <a href="privacy.html" class="text">Privacy Policy</a>
+                            <span class="arrow">→</span>
+                        </li>
+                    </ul>
+				</div>
 				<div class="menu_right">
 					<div class="contact_block">
 						<div class="contact_title">WHERE WE ARE</div>
@@ -1235,86 +1276,86 @@
                 <h2 class="section_title">Celebrations & Client Experiences</h2>
                 <div class="feedbacks_slider">
                     <div class="swiper-wrapper">
-                                                            <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer1.jpg" width="325" height="175" alt="Mohan Vamsi" title="Mohan Vamsi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>Nice convention center hall with decent maintenance. The staff was very punctual and ensured everything was perfectly arranged on time. It’s a fully air-conditioned venue with great aesthetics, and the dining hall is truly marvelous. Perfect choice for weddings and receptions.</p></div>
-<div class="feedback_author">Mohan Vamsi</div>
+                                                                    <div class="swiper-slide">
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Arjun Reddy1.webp" width="325" height="175" alt="Arjun Reddy" title="Arjun Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>Nice convention center hall with decent maintenance. The staff was very punctual and ensured everything was perfectly arranged on time. It’s a fully air-conditioned venue with great aesthetics, and the dining hall is truly marvelous. Perfect choice for weddings and receptions.</p></div>
+    <div class="feedback_author">Arjun Reddy</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer2.jpg" width="325" height="175" alt="Raj" title="Raj" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>Nice air-conditioned function hall. Overall experience was good. Parking can be a bit challenging during large events, but the venue itself is well maintained and spacious.</p></div>
-<div class="feedback_author">Raj</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Ananya Sharma2.webp" width="325" height="175" alt="Ananya Sharma" title="Ananya Sharma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>Nice air-conditioned function hall. Overall experience was good. Parking can be a bit challenging during large events, but the venue itself is well maintained and spacious.</p></div>
+    <div class="feedback_author">Ananya Sharma</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer3.jpg" width="325" height="175" alt="As Shankar" title="As Shankar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>It has a very large area suitable for any kind of convention. The environment is peaceful and the interior design is beautiful. Central air conditioning makes the experience very comfortable.</p></div>
-<div class="feedback_author">As Shankar</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Karthik Varma3.webp" width="325" height="175" alt="Karthik Varma" title="Karthik Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>It has a very large area suitable for any kind of convention. The environment is peaceful and the interior design is beautiful. Central air conditioning makes the experience very comfortable.</p></div>
+    <div class="feedback_author">Karthik Varma</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer4.jpg" width="325" height="175" alt="Suresh Reddy" title="Suresh Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>A perfect venue for grand celebrations. The ambience, lighting, and space make every event feel luxurious and memorable.</p></div>
-<div class="feedback_author">Suresh Reddy</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Rohit 4.webp" width="325" height="175" alt="Rohit" title="Rohit" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>A perfect venue for grand celebrations. The ambience, lighting, and space make every event feel luxurious and memorable.</p></div>
+    <div class="feedback_author">Rohit</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer5.jpg" width="325" height="175" alt="Kavya Sri" title="Kavya Sri" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>Everything from decoration to management was handled professionally. Our family event turned out exactly how we imagined.</p></div>
-<div class="feedback_author">Kavya Sri</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Priya Reddy5.webp" width="325" height="175" alt="Priya Reddy" title="Priya Reddy" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>Everything from decoration to management was handled professionally. Our family event turned out exactly how we imagined.</p></div>
+    <div class="feedback_author">Priya Reddy</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer6.jpg" width="325" height="175" alt="Ramesh Kumar" title="Ramesh Kumar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>Spacious, elegant, and well-organized. One of the best convention halls in Warangal for weddings and large gatherings.</p></div>
-<div class="feedback_author">Ramesh Kumar</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Vikram Rao6.webp" width="325" height="175" alt="Vikram Rao" title="Vikram Rao" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>Spacious, elegant, and well-organized. One of the best convention halls in Warangal for weddings and large gatherings.</p></div>
+    <div class="feedback_author">Vikram Rao</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer7.jpg" width="325" height="175" alt="Priya Nair" title="Priya Nair" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>The interiors are stunning and the atmosphere is very pleasant. Guests were impressed with the overall setup.</p></div>
-<div class="feedback_author">Priya Nair</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Sneha Varma7.webp" width="325" height="175" alt="Sneha Varma" title="Sneha Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>The interiors are stunning and the atmosphere is very pleasant. Guests were impressed with the overall setup.</p></div>
+    <div class="feedback_author">Sneha Varma</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer8.jpg" width="325" height="175" alt="Harish Varma" title="Harish Varma" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>Excellent service and smooth coordination. The team ensured everything ran perfectly without any stress.</p></div>
-<div class="feedback_author" class="feedback_author">Harish Varma</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Sandeep Kumar8.webp" width="325" height="175" alt="Sandeep Kumar" title="Sandeep Kumar" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>Excellent service and smooth coordination. The team ensured everything ran perfectly without any stress.</p></div>
+    <div class="feedback_author">Sandeep Kumar</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer9.jpg" width="325" height="175" alt="Lakshmi Devi" title="Lakshmi Devi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>A beautiful place for hosting events. Clean, well-maintained, and very grand in appearance.</p></div>
-<div class="feedback_author" class="feedback_author">Lakshmi Devi</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Kavya Rao9.webp" width="325" height="175" alt="Kavya Rao" title="Kavya Rao" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>A beautiful place for hosting events. Clean, well-maintained, and very grand in appearance.</p></div>
+    <div class="feedback_author">Kavya Rao</div>
 </div>                                                                    <div class="swiper-slide">
-<div class="image_block">
-<picture>
-    <img loading="lazy" src="./images/testimonials/customer10.jpg" width="325" height="175" alt="Kiran Teja" title="Kiran Teja" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
-</picture>
-</div>
-<div class="feedback_text"> <p>Highly recommended for anyone planning a wedding or reception. Great experience from start to finish.</p></div>
-<div class="feedback_author">Kiran Teja</div>
+    <div class="image_block">
+        <picture>
+            <img loading="eager" src="./images/testimonials/Swathi10.webp" width="325" height="175" alt="Swathi" title="Swathi" style="object-fit: cover; border-radius: 50%; width: 180px; height: 180px; margin: 0 auto; border: 4px solid #004535;" onerror="this.src='images/main_logo.png'"> 
+        </picture>
+    </div>
+    <div class="feedback_text"> <p>Highly recommended for anyone planning a wedding or reception. Great experience from start to finish.</p></div>
+    <div class="feedback_author">Swathi</div>
 </div>
                     </div>
                     <div class="slider_nav_wrap">
@@ -1331,59 +1372,30 @@
         <div class="footer_inner">
             <div class="menu_left">
                 <ul class="main_menu">
-                                    <li>
-    <a class="" href="index.html">Home</a>
-    </li>                                    <li>
-    <a class="" href="booking.html">Plan Your Perfect Event</a>
-    </li>                                    <li>
-    <a class="" href="layouts/index.html">Explore Layouts</a>
-    </li>                                    <li>
-    <a class="" href="terms.html">Terms & Conditions</a>
-    </li>                                    <li>
-    <a class="" href="privacy.html">Privacy Policy</a>
-    </li>
-                            </ul>
-                            <div class="info_block">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Plan Your Perfect Event</a></li>
+                    <li><a href="layouts/index.html">Explore Layouts</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+                <div class="info_block">
                     <div class="copyrights">
                         <span>All Rights Reserved</span>
                         <span>Kodam Convention ©2026</span>
                     </div>
-                    <div class="developer" style="display: flex; align-items: center; justify-content: center;">
+                    <div class="developer">
                         Design and development
-                        <a href="https://mahadavdigital.com/" target="_blank" style="position: relative; display: inline-block; width: 180px; height: 20px; margin-left: 10px;">
-                            <img loading="lazy" src="./images/mahadav%20digital%20logo.svg" title="Mahadav Digital" alt="Mahadav Digital" style="position: absolute; height: 84px; width: max-content; max-width: none; top: 50%; left: 0; transform: translateY(-50%);">
+                        <a href="https://mahadavdigital.com/" target="_blank">
+                            <img src="./images/mahadav digital logo.png" alt="Mahadav Digital">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="menu_right">
                 <div class="right_inner">
-                    <style id="footer-logo-styles">
-                        html { scroll-behavior: smooth; }
-                        @media (min-width: 769px) {
-                            .footer .main_menu > li:first-child,
-                            .footer .secondary_menu > li:first-child {
-                                margin-top: 30px !important;
-                            }
-                        }
-                        .footer-logo img {
-                            width: 140px !important;
-                            height: auto !important;
-                            object-fit: contain !important;
-                            display: block !important;
-                            flex-shrink: 0 !important;
-                        }
-                        @media (max-width: 768px) {
-                            .footer-logo img {
-                                width: 110px !important;
-                            }
-                        }
-                    </style>
                     <div class="logo_block footer-logo">
-                        <a href="index.html">
                                                      <img loading="lazy" src="./images/Kodam-gold-Logo.png" alt="Kodam Convention" title="Kodam Convention">
-                        </a>
-                                            </div>
+                                        </div>
                     <a href="booking.html" class="booking_btn">Booking</a>
                     <div class="contact_block">
                         <div class="contact_title">WHERE WE ARE</div>
@@ -1647,46 +1659,43 @@
     });
 
     // ── TESTIMONIAL INDICATOR SYNC (FROM HOME PAGE) ──
-    (function() {
-        function initTestimonialSync() {
-            const swiperEl = document.querySelector('.feedbacks_slider');
-            if (!swiperEl) return;
-            
-            // Wait for swiper to be attached to the DOM element
-            const swiper = swiperEl.swiper;
-            if (!swiper) {
-                setTimeout(initTestimonialSync, 150);
+    <script id="testimonial-slider-fix-and-sync">
+    document.addEventListener('DOMContentLoaded', function() {
+        let testimonialSwiper;
+        const swiperEl = document.querySelector('.feedbacks_slider');
+        const prevBtn = document.querySelector('.swiper-prev');
+        const nextBtn = document.querySelector('.swiper-next');
+
+        function initSwiper() {
+            if (typeof Swiper === 'undefined') {
+                setTimeout(initSwiper, 100);
                 return;
             }
 
-            const indicator = swiperEl.querySelector('.swiper-scrollbar-drag');
-            const track = swiperEl.querySelector('.nav_track');
-            
-            if (!indicator || !track) return;
+            if (swiperEl.swiper) swiperEl.swiper.destroy(true, true);
 
-            // Total testimonials count
-            const total = 10; 
+            testimonialSwiper = new Swiper('.feedbacks_slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                speed: 600,
+                grabCursor: true,
+                simulateTouch: true,
+                threshold: 10,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                }
+            });
 
-            function updateIndicator() {
-                const currentIndex = swiper.realIndex;
-                const moveRatio = currentIndex * 100;
-                indicator.style.setProperty('transform', `translateX(${moveRatio}%) translateY(-50%)`, 'important');
-            }
-
-            // Sync on change (manual and auto)
-            swiper.on('slideChange', updateIndicator);
-            
-            // Initial sync
-            updateIndicator();
+            // Keep Arrow Buttons Working
+            if (prevBtn) prevBtn.addEventListener('click', () => testimonialSwiper.slidePrev());
+            if (nextBtn) nextBtn.addEventListener('click', () => testimonialSwiper.slideNext());
         }
 
-        // Start synchronization logic
-        if (document.readyState === 'complete') {
-            initTestimonialSync();
-        } else {
-            window.addEventListener('load', initTestimonialSync);
-        }
-    })();
+        initSwiper();
+    });
+    </script>
 </script>
 
                 <!-- POPUP MODAL HTML -->

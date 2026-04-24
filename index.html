@@ -1,21 +1,39 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-    <title>Kodam Convention</title>
-    <meta name="description" content="Family vacation in Ijevan mountains, Armenia. Hotel with SPA, restaurant, event halls. Cozy rooms, great prices, online booking.">
-    <meta name="keywords" content="hotel in Ijevan, Ijevan accommodation, family hotel Armenia, mountain hotel Armenia, book a room in Ijevan, hotel with SPA, hotel with restaurant, event venue Ijevan, tourism in Armenia, hotel for tourists, where to stay in Ijevan">
+    <title>Kodam Convention – Best Wedding & Event Hall in Warangal</title>
+    <meta name="description" content="Kodam Convention is a premium wedding and event hall in Warangal, located near CSR Garden, Ramannapet. Perfect for marriages, corporate events, and birthday parties. Call 085200 25000 to book.">
+    <meta name="keywords" content="wedding hall in Warangal, function hall Warangal, convention center Warangal, event venue Warangal, birthday party hall Warangal, Kodam Convention">
     <meta name="csrf-token" content="WxqFqeFPwXUfyIer5UKqKuu1fHFHkQElOJl0TVrr">
     <meta property="og:site_name" content="Kodam Convention">
-    <meta property="og:title" content="Kodam Convention">
-    <meta property="og:description" content="Family vacation in Ijevan mountains, Armenia. Hotel with SPA, restaurant, event halls. Cozy rooms, great prices, online booking.">
+    <meta property="og:title" content="Kodam Convention – Wedding & Event Hall in Warangal">
+    <meta property="og:description" content="Book Kodam Convention for weddings, corporate events, and parties in Warangal. Spacious venue near CSR Garden.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.oldijevan.am/en">
-    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:url" content="https://www.kodamconvention.com/">
+    <meta property="og:image" content="https://www.kodamconvention.com/Kodam-gold-Logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="./images/Kodam-gold-Logo.png">
-    <link rel="shortcut icon" href="./images/Kodam-gold-Logo.png">
-    <link rel="apple-touch-icon" href="./images/Kodam-gold-Logo.png">
-    <link rel="icon" href="./images/Kodam-gold-Logo.png?v=1">
+    <link rel="icon" type="image/png" href="/Kodam-gold-Logo.png">
+    <link rel="shortcut icon" href="/Kodam-gold-Logo.png">
+    <link rel="apple-touch-icon" href="/Kodam-gold-Logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EventVenue",
+      "name": "Kodam Convention",
+      "image": "https://www.kodamconvention.com/Kodam-gold-Logo.png",
+      "url": "https://www.kodamconvention.com/",
+      "telephone": "+91 85200 25000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Door No 23, 6, 139/7, Hunter Rd, near CSR Garden, Ramannapet",
+        "addressLocality": "Warangal",
+        "addressRegion": "Telangana",
+        "postalCode": "506001",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
 
     
     <link rel="preload" as="image" href="./images/main-new-scrren.jpg-_x1080-quality%2875%29-webp%2895%29-o%28jpg%29.webp">
@@ -78,18 +96,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Robust Error Handling for images and scripts
-    window.addEventListener('error', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.target.style.display = 'none'; // Avoid broken image icons
-        }
-        if (e.target.tagName === 'SCRIPT') {
-            console.error('Failed to load script:', e.target.src);
-        }
-    }, true);
-    });
+window.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.target.style.display = 'none';
+    }
+}, true);
 </script>
+
+<style>
+/* 1. Prevent double scrollbars (CRITICAL) */
+html {
+    overflow: hidden !important;
+    height: 100%;
+}
+/* 2. Popup Base Styles */
+#galleryPopup {
+    position: fixed;
+    top: 100px; /* Aligned below your header */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.45);
+    z-index: 99999;
+    opacity: 1 !important; /* Overrides template animations */
+}
+/* 3. Force Visibility (Overriding template's opacity:0 rules) */
+#galleryPopup *,
+#galleryPopup .popup-inner,
+#galleryPopup #popupImg,
+#galleryPopup .close-btn,
+#galleryPopup .nav-btn {
+    opacity: 1 !important;
+}
+</style>
 
     
     
@@ -2344,22 +2387,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
         }
 
-        #galleryPopup {
-            position: fixed;
-            top: 100px; /* Aligned below header */
-            left: 0;
-            width: 100%;
-            height: calc(100% - 100px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(8px);
-            background: rgba(0,0,0,0.45);
-            z-index: 99999;
-        }
 
         .popup-inner {
-            display: flex;
+            display: flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -2375,7 +2407,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             transition: transform 0.3s ease;
             animation: zoomIn 0.3s ease;
             position: relative;
-            z-index: 1;
+            z-index: 10001;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
         }
 
         @keyframes zoomIn {
@@ -2387,7 +2423,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             z-index: 1000001 !important;
             opacity: 1 !important;
             visibility: visible !important;
+            display: block !important;
             transition: all 0.3s ease;
+            pointer-events: auto !important;
         }
 
         #galleryPopup .close-btn {
@@ -2998,7 +3036,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="developer">
                         Design and development
                         <a href="https://mahadavdigital.com/" target="_blank">
-                            <img src="./images/mahadav digital logo.png" alt="Mahadav Digital">
+                            <img src="./images/mahadav digital logo.svg" alt="Mahadav Digital">
                         </a>
                     </div>
                 </div>
@@ -3158,19 +3196,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           images = Array.from(document.querySelectorAll(".gallery-item")).filter(el => el.style.display !== "none");
           currentIndex = images.indexOf(card);
           const img = card.querySelector("img");
+          
           if (img && popupImg) {
-              console.log("SETTING IMAGE:", img.src);
-              popupImg.style.display = "none"; // reset visibility
+              popup.style.display = 'flex'; // Show popup first
+              
               setTimeout(() => {
                   popupImg.src = img.src;
-                  popupImg.onload = () => {
-                      popupImg.style.display = "block";
-                  };
+                  popupImg.style.display = 'block';
+                  updateButtons();
               }, 50);
-              
-              popup.style.display = "flex";
-              document.body.style.overflow = 'hidden';
-              updateButtons();
           }
       }
 
@@ -3190,13 +3224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   currentIndex++;
                   const img = images[currentIndex].querySelector("img");
                   if (img && popupImg) {
-                      popupImg.style.display = "none";
-                      setTimeout(() => {
-                          popupImg.src = img.src;
-                          popupImg.onload = () => {
-                              popupImg.style.display = "block";
-                          };
-                      }, 50);
+                      popupImg.src = img.src;
                       updateButtons();
                   }
               }
@@ -3211,13 +3239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   currentIndex--;
                   const img = images[currentIndex].querySelector("img");
                   if (img && popupImg) {
-                      popupImg.style.display = "none";
-                      setTimeout(() => {
-                          popupImg.src = img.src;
-                          popupImg.onload = () => {
-                              popupImg.style.display = "block";
-                          };
-                      }, 50);
+                      popupImg.src = img.src;
                       updateButtons();
                   }
               }
@@ -3248,10 +3270,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="close-btn">&times;</span>
         <button class="nav-btn prev">&#10094;</button>
         <div class="popup-inner">
-            <img loading="lazy" id="popupImg" src="" alt="Gallery Image" />
+            <img id="popupImg" src="" alt="Gallery Image" />
         </div>
         <button class="nav-btn next">&#10095;</button>
     </div>
+    <!-- MUST ADD THIS SCRIPT RIGHT AFTER THE HTML -->
+    <script>
+    (function() {
+        var popup = document.getElementById('galleryPopup');
+        if (popup && popup.parentElement !== document.body) {
+            document.body.appendChild(popup);
+        }
+    })();
+    </script>
     <script id="video-mute-logic">
     document.addEventListener('DOMContentLoaded', function() {
         (function() {

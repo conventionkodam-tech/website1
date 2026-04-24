@@ -2356,11 +2356,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             justify-content: center;
             backdrop-filter: blur(8px);
             background: rgba(0,0,0,0.45);
-            z-index: 99999;
+            z-index: 1000;
+            opacity: 1;
+            visibility: visible;
         }
 
         .popup-inner {
-            display: flex;
+            display: flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -2376,7 +2380,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             transition: transform 0.3s ease;
             animation: zoomIn 0.3s ease;
             position: relative;
-            z-index: 1;
+            z-index: 10001;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
         }
 
         @keyframes zoomIn {
@@ -2388,7 +2396,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             z-index: 1000001 !important;
             opacity: 1 !important;
             visibility: visible !important;
+            display: block !important;
             transition: all 0.3s ease;
+            pointer-events: auto !important;
         }
 
         #galleryPopup .close-btn {
@@ -2999,7 +3009,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="developer">
                         Design and development
                         <a href="https://mahadavdigital.com/" target="_blank">
-                            <img src="./images/mahadav digital logo.png" alt="Mahadav Digital">
+                            <img src="./images/mahadav digital logo.svg" alt="Mahadav Digital">
                         </a>
                     </div>
                 </div>
@@ -3167,17 +3177,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           images = Array.from(document.querySelectorAll(".gallery-item")).filter(el => el.style.display !== "none");
           currentIndex = images.indexOf(card);
           const img = card.querySelector("img");
+          if (!img) console.error("[Gallery Debug] Clicked card has no img element:", card);
+          if (!popupImg) console.error("[Gallery Debug] popupImg is null! document.getElementById failed.");
+          
           if (img && popupImg) {
-              console.log("SETTING IMAGE:", img.src);
-              popupImg.style.display = "none"; // reset visibility
-              setTimeout(() => {
-                  popupImg.src = img.src;
-                  popupImg.onload = () => {
-                      popupImg.style.display = "block";
-                  };
-              }, 50);
+              console.log("[Gallery Debug] Setting image src to:", img.src);
+              if (!img.src) console.error("[Gallery Debug] Image src is empty or undefined!");
               
-              popup.style.display = "flex";
+              popupImg.src = img.src;
+              popupImg.style.setProperty("display", "block", "important");
+              popupImg.style.setProperty("opacity", "1", "important");
+              popupImg.style.setProperty("visibility", "visible", "important");
+              
+              popup.style.setProperty("display", "flex", "important");
+              popup.style.setProperty("opacity", "1", "important");
+              popup.style.setProperty("visibility", "visible", "important");
+              
               document.body.style.overflow = 'hidden';
               updateButtons();
           }
@@ -3199,13 +3214,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   currentIndex++;
                   const img = images[currentIndex].querySelector("img");
                   if (img && popupImg) {
-                      popupImg.style.display = "none";
-                      setTimeout(() => {
-                          popupImg.src = img.src;
-                          popupImg.onload = () => {
-                              popupImg.style.display = "block";
-                          };
-                      }, 50);
+                      console.log("[Gallery Debug] Next setting src:", img.src);
+                      popupImg.src = img.src;
+                      popupImg.style.setProperty("display", "block", "important");
                       updateButtons();
                   }
               }
@@ -3220,13 +3231,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   currentIndex--;
                   const img = images[currentIndex].querySelector("img");
                   if (img && popupImg) {
-                      popupImg.style.display = "none";
-                      setTimeout(() => {
-                          popupImg.src = img.src;
-                          popupImg.onload = () => {
-                              popupImg.style.display = "block";
-                          };
-                      }, 50);
+                      console.log("[Gallery Debug] Prev setting src:", img.src);
+                      popupImg.src = img.src;
+                      popupImg.style.setProperty("display", "block", "important");
                       updateButtons();
                   }
               }
@@ -3257,7 +3264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="close-btn">&times;</span>
         <button class="nav-btn prev">&#10094;</button>
         <div class="popup-inner">
-            <img loading="lazy" id="popupImg" src="" alt="Gallery Image" />
+            <img id="popupImg" src="" alt="Gallery Image" />
         </div>
         <button class="nav-btn next">&#10095;</button>
     </div>

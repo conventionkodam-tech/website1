@@ -70,7 +70,15 @@
     color: #004535 !important;
 }
 
+.footer .developer {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
 .footer .developer img {
+    height: 105px !important;
+    width: auto !important;
     transition: transform 0.3s ease;
 }
 
@@ -118,6 +126,6 @@
     }
     
     .footer .developer img {
-        height: 30px !important;
+        height: 115px !important;
     }
 }
